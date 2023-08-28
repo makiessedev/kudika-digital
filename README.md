@@ -42,9 +42,6 @@ npm install
 <p>Este aplicativo foi construído usando:</p>
 
 + <a href="https://legacy.reactjs.org/docs/getting-started.html">React</a>
-+ <a href="https://styled-components.com/">Styled Components</a>
-+ <a href="https://react-icons.github.io/react-icons">React Icon</a>
-
 
 ## Screenshots
 
