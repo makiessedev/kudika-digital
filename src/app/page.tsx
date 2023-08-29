@@ -1,5 +1,7 @@
-export default function Home() {
+import Home from "@/components/@Home"
+
+export default function index() {
   return (
-    <h1 className="font-sans bg-slate-500">Kudika Digital</h1>
+    <Home />
   )
 }
