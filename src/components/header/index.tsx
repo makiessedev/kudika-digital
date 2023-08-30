@@ -1,20 +1,37 @@
-import React from 'react'
+'use client'
+
+import React, { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
+
+import { AlignJustify } from 'lucide-react'
 
 export default function Header() {
+  const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
+
   return (
-    <header className='px-[65px] py-[50px] flex flex-row justify-between items-center bg-white'>
-      <div>
-        <img src="/src/assets/logo/logo_kudika_black.png" alt="Tentando" />
+    <header className='fixed  px-10 h-28 w-full bg-white'>
+      <div className='flex w-full md:w-[129px] h-full flex-row justify-between items-center'>
+        <div className='w-[100px] md:w-[129px]'>
+          <Image
+            className='w-full'
+            src="/logo_kudika_black.png" 
+            alt="Kudika logo" 
+            width='129' 
+            height='63' 
+          />
+        </div>
+      
+        <AlignJustify className='cursor-pointer md:hidden'/>
       </div>
-      <nav>
-        <ul className='flex  items-center gap-[42px]'>
-          <li><Link href="#!">Home</Link></li>
-          <li><Link href="#!">Soluções</Link></li>
-          <li><Link href="#!">Cases</Link></li>
-          <li><Link href="#!">Serviços</Link></li>
-          <li><Link href="#!">Blog</Link></li>
-          <li><Link href="#!">Orçamento</Link></li>
+      <nav className='flex flex-col'>
+        <ul className='md:flex'>
+          <li className=''><Link href="#!">Home</Link></li>
+          <li className=''><Link href="#!">Soluções</Link></li>
+          <li className=''><Link href="#!">Cases</Link></li>
+          <li className=''><Link href="#!">Serviços</Link></li>
+          <li className=''><Link href="#!">Blog</Link></li>
+          <li className=''><Link href="#!">Orçamento</Link></li>
         </ul>
       </nav>
     </header>
