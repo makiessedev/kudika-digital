@@ -1,17 +1,21 @@
 'use client'
 
 import React, { useState } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 
-import { AlignJustify } from 'lucide-react'
+import { Link } from './Link'
+import { HumburguerIcon } from './HumburguerIcon'
 
 export default function Header() {
   const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
-
+  
   return (
-    <header className='fixed  px-10 h-28 w-full bg-white'>
-      <div className='flex w-full md:w-[129px] h-full flex-row justify-between items-center'>
+    <header 
+      className='px-10 md:px-20 h-28 w-full md:grid md:grid-cols-2 grid-flow-col bg-white'
+    >
+      <div 
+        className='flex w-full md:w-[129px] h-full flex-row justify-between items-center'
+      >
         <div className='w-[100px] md:w-[129px]'>
           <Image
             className='w-full'
@@ -22,18 +26,34 @@ export default function Header() {
           />
         </div>
       
-        <AlignJustify className='cursor-pointer md:hidden'/>
+        <HumburguerIcon setActiveMobileMenu={setActiveMobileMenu} />
       </div>
-      <nav className='flex flex-col'>
-        <ul className='md:flex'>
-          <li className=''><Link href="#!">Home</Link></li>
-          <li className=''><Link href="#!">Soluções</Link></li>
-          <li className=''><Link href="#!">Cases</Link></li>
-          <li className=''><Link href="#!">Serviços</Link></li>
-          <li className=''><Link href="#!">Blog</Link></li>
-          <li className=''><Link href="#!">Orçamento</Link></li>
-        </ul>
-      </nav>
+      { 
+        activeMobileMenu && 
+        <>
+          <ul 
+            className='flex flex-col items-center md:flex-row md:justify-end justify-center'
+          >
+            <Link href='#!'>
+              Home
+            </Link>
+            <Link href='#!'>
+              Solução
+            </Link>
+            <Link href='#!'>
+              Cases
+            </Link>
+            <Link href='#!'>
+              Serviços
+            </Link>
+            <Link href='#!'>
+              Blog
+            </Link>
+            <Link href='#!'>
+              Orçamento
+            </Link>
+          </ul>
+        </> }
     </header>
   )
 }
