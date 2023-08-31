@@ -21,6 +21,9 @@ const config: Config = {
 
       black: '#0D0D0D',
       white: '#FFFFFF'
+    },
+    fontFamily: {
+      montserrat: ['Montserrat']
     }
   },
   plugins: [],

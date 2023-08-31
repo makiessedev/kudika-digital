@@ -9,22 +9,13 @@ export default function index() {
   return (
     <Container>
       <div
-        className="flex flex-col justify-center items-center md:items-start md:-mt-2 space-y-4 md:space-y-6 py-9 md:py-0"
+        className="flex flex-col justify-center items-center md:items-start md:-mt-2 space-y-4 md:space-y-6 py-9 md:py-0 font-montserrat"
       >
         <Title>
           Marketing e Publicidade
         </Title>
         <Paragraph>
-          <span
-            className="font-bold"
-          > 
-            Transforme sua marca em um sucesso online <br />
-          </span>
-          <span
-            className="hidden md:inline"
-          >
-            com nossos serviços de marketing e publicidade.
-          </span>
+          <span className="font-bold">Transforme sua marca em um sucesso online </span> com nossos serviços de marketing e publicidade.
         </Paragraph>
         <Button>
           Consulta grátis
@@ -33,7 +24,7 @@ export default function index() {
       <Image
         className="hidden md:block" 
         src='/girl.png' 
-        width={569} 
+        width={550} 
         height={420} 
         alt="girl"
       />

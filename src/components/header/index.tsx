@@ -12,7 +12,6 @@ import { KudikaLogo } from './KudikaLogo'
 export default function Header() {
   const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
   const isMobile = useMedia('(max-width: 767px)')
-  console.log(isMobile, activeMobileMenu)
 
   return (
     <HeaderContainer >
