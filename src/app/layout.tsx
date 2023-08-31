@@ -30,7 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={montserrat.className}>
+      <body className={`montserrat.className`}>
         <Header />
         {children}
       </body>
