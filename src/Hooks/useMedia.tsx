@@ -10,6 +10,7 @@ export function useMedia( media: string) {
       setMatch(matches)
     }
 
+    changeMatch()
     addEventListener('resize', changeMatch)
 
     return () => removeEventListener('resize', changeMatch)

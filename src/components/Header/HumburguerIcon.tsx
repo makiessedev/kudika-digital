@@ -9,7 +9,7 @@ export function HumburguerIcon({ setActiveMobileMenu }: HumburguerIconProps) {
   return (
     <AlignJustify 
       className='cursor-pointer md:hidden' 
-      onClick={() => setActiveMobileMenu(status => !status)}
+      onClick={() => {setActiveMobileMenu(status => !status)}}
     />
   )
 }
