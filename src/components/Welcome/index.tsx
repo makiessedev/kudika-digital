@@ -30,13 +30,22 @@ export default function index() {
         alt="girl"
       />
     </Container>
+    <div>
     <Image
-    className="hidden md:block" 
+    className="hidden md:block w-full" 
     src='/background/bottom-white-wave.png' 
     width={550} 
-    height={420} 
+    height={50} 
     alt="Wave bg white"
   />
+  <Image
+    className="hidden md:block relative top-2" 
+    src='/background/ship.svg' 
+    width={150} 
+    height={150} 
+    alt="Wave bg white"
+  />
+    </div>
   </>
   )
 }
