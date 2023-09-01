@@ -7,6 +7,7 @@ import { Button } from "./Button";
 
 export default function index() {
   return (
+    <>
     <Container>
       <div
         className="flex flex-col justify-center items-center md:items-start md:-mt-2 space-y-4 md:space-y-6 py-9 md:py-0 font-montserrat"
@@ -29,5 +30,13 @@ export default function index() {
         alt="girl"
       />
     </Container>
+    <Image
+    className="hidden md:block" 
+    src='/background/bottom-white-wave.png' 
+    width={550} 
+    height={420} 
+    alt="Wave bg white"
+  />
+  </>
   )
 }

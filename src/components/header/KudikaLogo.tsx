@@ -7,8 +7,8 @@ export function KudikaLogo() {
         className='w-full'
         src="/logo_kudika_black.png" 
         alt="Kudika logo" 
-        width='129' 
-        height='63' 
+        width='120' 
+        height='60' 
       />
     </div>
   )
