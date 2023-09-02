@@ -4,6 +4,8 @@ import { Container } from "./Container";
 import { Title } from "./Title";
 import { Paragraph } from "./Paragraph";
 import { SucessCase } from "./SucessCase"
+import { cases } from "./SucessCase/cases" 
+import { randomUUID } from "crypto";
 
 export default function index() {
   return (
@@ -24,12 +26,19 @@ export default function index() {
           className="w-48 md:w-[180px] h-[10px] md:h-[14px] rounded bg-red-500"
         />
 
-      </div>{/* 
-      <div
-        className="md:flex md:flex-row md:mt-20 md:gap-20 md:justify-center"
-      > */}
-      <SucessCase />
-      
+      </div>
+      {
+        cases.map(({imagePosition, imgSrc, strongText, text, title}) => (
+          <SucessCase 
+            key={randomUUID()}
+            title={title} 
+            strongText={strongText} 
+            text={text}
+            imgSrc={imgSrc} 
+            imagePosition={imagePosition} 
+          />
+        ))
+      }
     </Container>
   )
 }
