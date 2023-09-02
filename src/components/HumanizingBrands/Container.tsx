@@ -17,7 +17,7 @@ export function Container({ children }: { children: ReactNode }) {
         />
         { children }
         <img 
-          className="absolute block w-full bottom-0 left-0 right-0"
+          className="absolute block w-full left-0 right-0 -bottom-[1px]"
           src='/background/top-white-wave.png' 
           alt=""
           width={1280}
