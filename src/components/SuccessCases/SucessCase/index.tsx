@@ -1,5 +1,9 @@
 import Image from "next/image";
 import { Button } from "../Button";
+import { Container } from "./Container";
+import { Title } from "./title"
+import { StrongText } from "./StrongText";
+import { Text } from "./Text";
 
 type SuccessCaseProps = {
   imagePosition: string | 'left' | 'right' ,
@@ -13,23 +17,17 @@ export function SucessCase(
   { imagePosition, imgSrc, strongText, text, title }: SuccessCaseProps) {
 
   return (
-    <section
-      className={`md:flex md:flex-row md:my-20 mb-6 xl:gap-20 md:justify-center ${ imagePosition === 'left' && 'md:flex-row-reverse' }`}
+    <Container
+      imagePosition={imagePosition}
     >
       <div
        className="flex flex-col space-y-3 pt-3 items-center justify-center md:items-center md:space-y-5"
       >
-        <h3
-          className="font-bold text-2xl md:text-4xl text-gray-500 uppercase"
-        >{title}</h3>
+        <Title>{title}</Title>
 
-        <p
-          className="font-bold text-center text-base md:text-lg text-gray-500 md:w-[378px]"
-        >{strongText}</p>
+        <StrongText>{strongText}</StrongText>
 
-        <p
-          className="font-regular text-base md:text-lg text-center text-gray-500 mb-1"
-        >{text}</p>
+        <Text>{ text }</Text>
         <Button>conheça esse case</Button>
       </div>
       <Image
@@ -39,6 +37,6 @@ export function SucessCase(
         height={365} 
         alt="girl"
       />
-    </section>
+    </Container>
   )
 }
