@@ -10,6 +10,7 @@ export default function index() {
       <HumanizingBrands/>
       <SuccessCases/>
       <Services />
+      <div className='bg-gray-500 h-9'></div>
     </>
   )
 }
