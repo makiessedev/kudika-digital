@@ -1,11 +1,10 @@
 import { Paragraph } from "./Paragraph";
-import { PostsContainer } from "./PostsContainer";
 import { Title } from "./Title";
 
 export function LearningToday() {
   return (
     <section
-      className="px-6 lg:px-20 mt-8 space-y-4"
+      className="px-6 lg:px-20 mt-8 space-y-4 mb-6"
     >
       <Title>
         aprendizado de hoje

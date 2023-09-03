@@ -6,6 +6,7 @@ import { MarketingTransform } from '@/components/MarketingTransform'
 import { AllServices } from '@/components/AllServices'
 import { TalkToUsNow } from '@/components/TalkToUsNow'
 import { LearningToday } from '@/components/LearningToday'
+import { ContactForm } from '@/components/ContactForm'
 
 export default function index() {
   return (
@@ -18,6 +19,7 @@ export default function index() {
       <AllServices />
       <TalkToUsNow />
       <LearningToday />
+      <ContactForm />
     </>
   )
 }

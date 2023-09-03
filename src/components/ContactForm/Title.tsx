@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export function Title({ children }: { children: ReactNode }) {
   return (
     <h2
-      className="text-red-500 text-center uppercase font-black text-3xl md:text-5xl xl:text-7xl"
+      className="text-white text-center uppercase max-w-[400px] font-bold text-2xl md:text-4xl"
     >
       { children }
     </h2>

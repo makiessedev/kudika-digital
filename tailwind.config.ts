@@ -26,6 +26,8 @@ const config: Config = {
       montserrat: ['Montserrat']
     }
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
 export default config
