@@ -4,7 +4,7 @@ import { Title } from "./Title";
 export function MarketingTransform() {
   return (
     <section
-      className="flex flex-col justify-center items-center md:justify-start gap-6 w-full h-[550px] md:h-[500px] bg-[url('/background/bg-free-consultation.svg')] bg-cover px-6"
+      className="flex flex-col justify-center items-center md:justify-start gap-6 w-screen h-[550px] md:h-[500px] bg-[url('/background/bg-free-consultation.svg')] bg-cover px-6 md:mb-4 bg-"
     >
       <Title>
         Transforme seu marketing connosco juntos podemos fazer a diferença
