@@ -4,6 +4,7 @@ import SuccessCases from '@/components/SuccessCases'
 import Services from '@/components/Services'
 import { MarketingTransform } from '@/components/MarketingTransform'
 import { AllServices } from '@/components/AllServices'
+import { TalkToUsNow } from '@/components/TalkToUsNow'
 
 export default function index() {
   return (
@@ -14,6 +15,7 @@ export default function index() {
       <Services />
       <MarketingTransform />
       <AllServices />
+      <TalkToUsNow />
     </>
   )
 }
