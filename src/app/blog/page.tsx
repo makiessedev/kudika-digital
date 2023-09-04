@@ -22,7 +22,6 @@ export default async function index() {
       <section 
         className="flex flex-col items-center pt-40 px-6 lg:px-20 gap-8"
         >
-        
         <div
           className="space-y-2"
         >
