@@ -1,8 +1,22 @@
 import Image from "next/image"
 import { FreeCheck } from "@/components/Blog/FreeCheck"
 import { Posts } from "@/components/Blog/Posts"
+import Link from "next/link"
 
-export default function index() {
+type PostProps = {
+    props: {
+    id: string,
+    title: string,
+    content: string,
+    author: string,
+  }
+}
+
+export default async function index() {
+  const response = await fetch('http://localhost:3000/post/all')
+  const json = await response.json()
+  const post: PostProps = json[0]
+
   return (
     <>
       <section 
@@ -30,21 +44,30 @@ export default function index() {
           >
             <h3
               className="font-bold text-xl text-center md:text-left md:text-3xl text-gray-500"
-            >Como criar uma estratégia de marketing eficaz: um guia passo passo</h3>
+            >{ post.props.title }</h3>
             <p
               className="font-normal text-base md:text-lg text-gray-500/50"
-            >Uma estratégia de marketing eficaz é essencial para o sucesso de qualquer negócio...</p>
+            >{
+
+              post.props.content?.length > 200
+                  ? `${post.props.content.substring(0, 200)}...`
+                  : post?.props.content
+            }</p>
             
             <div
               className="flex font-normal justify-between text-sm md:text-base text-gray-500/50"
             >
-              <span>Domingos Henriques</span>
+              <span>{post.props.author}</span>
               <span>17 Mar | Leitura: 9min</span>
             </div>
 
             <button
               className="px-6 py-3 bg-white text-gray-500/50 border border-gray-500/50 rounded-3xl"
-            >Ler mais</button>
+            >
+              <Link href={`/blog/post/${post.props.id}`}>
+                Ler mais
+              </Link>
+            </button>
           </div>
           <Image 
             src='/blog/ig-blog.png' 

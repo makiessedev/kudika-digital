@@ -16,7 +16,11 @@ type Post = {
 }
 
 export async function Posts() {
-  const response = await fetch('http://localhost:3000/post/all')
+  const response = await fetch('http://localhost:3000/post/all', {
+    next: {
+      revalidate: 5
+    }
+  })
   const posts: Post[] = await response.json()
 
   return (
