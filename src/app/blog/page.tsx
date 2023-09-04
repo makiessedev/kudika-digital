@@ -1,4 +1,5 @@
 import { FreeCheck } from "@/components/Blog/FreeCheck"
+import { Posts } from "@/components/Blog/Posts"
 import Image from "next/image"
 
 export default function index() {
@@ -54,6 +55,7 @@ export default function index() {
         </section>
       </section>
       <FreeCheck/>
+      <Posts/>
     </>
   )
 }
