@@ -1,13 +1,13 @@
-import { Container } from "../Subscribe/Container";
-import { Paragraph } from "./Paragraph";
-import { RedLine } from "./RedLine";
-import { Title } from "./Title";
+import { Container } from "./Container"
+import { Paragraph } from "./Paragraph"
+import { RedLine } from "./RedLine"
+import { Title } from "./Title"
 
 export function Header() {
   return (
     <Container>
-      <Title> Blog </Title>
-      <Paragraph> Fique ligado aos nossos artigos </Paragraph>
+      <Title>blog</Title>
+      <Paragraph>Fique ligado aos nossos artigos</Paragraph>
       <RedLine/>
     </Container>
   )

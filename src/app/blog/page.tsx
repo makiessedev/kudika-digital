@@ -2,6 +2,7 @@ import Image from "next/image"
 import { FreeCheck } from "@/components/Blog/FreeCheck"
 import { Posts } from "@/components/Blog/Posts"
 import Link from "next/link"
+import { Header } from "@/components/Blog/Header"
 
 type PostProps = {
     props: {
@@ -21,20 +22,8 @@ export default async function index() {
     <>
       <section 
         className="flex flex-col items-center pt-40 px-6 lg:px-20 gap-8"
-        >
-        <div
-          className="space-y-2"
-        >
-          <h2
-            className="font-black text-center text-5xl md:text-7xl text-red-500 uppercase"
-          >blog</h2>
-          <p
-            className="font-bold text-xl text-gray-500"
-          >Fique ligado aos nossos artigos</p>
-          <div 
-            className="mx-auto w-48 md:w-[180px] h-1 md:h-[14px] rounded bg-red-500"
-          />
-        </div>
+      >
+        <Header/>
         <section 
           className="flex flex-col md:flex-row gap-6 md:gap-20 md:pt-5"
         >

@@ -1,11 +1,11 @@
 import { ReactNode } from "react";
 
-export function Containe({ children }: { children: ReactNode }) {
+export function Container({ children }: { children: ReactNode }) {
   return (
-    <section
+    <div
       className="space-y-2"
     >
       { children }
-    </section>
+    </div>
   )
 }
