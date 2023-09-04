@@ -3,6 +3,11 @@ import Link from "next/link"
 
 import { PostContainer } from "./PostContainer";
 import { Button } from "./Button";
+import { Container } from "./Container";
+import { PostsWrapper } from "./PostsWrapper";
+import { Title } from "./Title";
+import { Content } from "./Content";
+import { FooterContainer } from "./FooterContainer";
 
 type Post = {
   props: {
@@ -21,59 +26,45 @@ export async function Posts() {
       revalidate: 5
     }
   })
+
   const posts: Post[] = await response.json()
 
   return (
-    <section 
-      className="flex flex-col items-center px-6"
-    >
-      <section
-        className="md:grid md:grid-cols-2 lg:grid-cols-3"
-      >
+    <Container>
+      <PostsWrapper>
         {
           posts.map(({props}) => (
             <PostContainer>
-              <div
-                className="space-y-4"
-              >
-                <Image 
-                  src='/blog/ig-blog.png' 
-                  width={595} 
-                  height={399}
-                  alt="computer"
-                />
-                <h3
-                  className="font-bold text-xl text-gray-500"
-                >{props.title}</h3>
-                <p
-                  className="font-normal text-base text-gray-500/50"
-                >{ props.content?.length > 200
-                  ? `${props.content.substring(0, 200)}...`
-                  : props?.content }</p>
-                
-                <div
-                  className="flex font-normal justify-between text-sm text-gray-500/50"
-                >
-                  <span>{props.author}</span>
-                  <span>17 Mar | Leitura: 9min</span>
-                </div>
+              <Image
+                src='/blog/ig-blog.png' 
+                width={595} 
+                height={399}
+                alt="computer"
+              />
+              <Title>{props.title}</Title>
+              <Content> 
+                { 
+                  props.content?.length > 200 
+                    ? `${props.content.substring(0, 200)}...`
+                    : props?.content 
+                }
+              </Content>
+              <FooterContainer>
+                <span>{props.author}</span>
+                <span>17 Mar | Leitura: 9min</span>
+              </FooterContainer>
 
-                <button
-                  className="px-6 py-3 bg-white text-gray-500/50 border border-gray-500/50 rounded-3xl"
-                  
-                >
-                  <Link
-                    href={`/blog/post/${props.id}`}
-                  >
-                    Ler mais
-                  </Link>
-                </button>
-              </div>
+              <Link
+                className="px-6 py-3 bg-white text-gray-500/50 border border-gray-500/50 rounded-3xl"
+                href={`/blog/post/${props.id}`}
+              >
+                Ler mais
+              </Link>
             </PostContainer>
           ))
         }
-      </section>
+      </PostsWrapper>
       <Button>ver mais posts</Button>
-    </section>
+    </Container>
   )
 }
