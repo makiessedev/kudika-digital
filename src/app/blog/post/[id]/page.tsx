@@ -21,8 +21,6 @@ export default async function index({ params }: Slug) {
   })
   const post: Post = await response.json()  
 
-  console.log(post)
-
   return (
     <section
       className="md:flex md:flex-col md:items-center px-6 lg:px-20 pt-28"
