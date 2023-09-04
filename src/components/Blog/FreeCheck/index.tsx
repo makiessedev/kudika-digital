@@ -7,32 +7,31 @@ import { Button } from "./Button";
 export function FreeCheck() {
   return (
     <Container>
-      <div className="w-[345px] h-[666px] md:flex items-center hidden">      
-        <Image
-          className="hidden md:block w-[345px] h-[446px]" 
-          src='/boy.png' 
-          width={565} 
-          height={666} 
-          alt="girl"
-        />
-      </div>
       <div
-        className="flex flex-col justify-center items-center md:items-start md:-mt-2 space-y-4 md:space-y-6 py-20 md:py-0"
+        className="flex flex-col justify-center items-center md:items-start md:pt-14 md:-mt-2 space-y-4 md:space-y-6 py-20 md:py-0"
       >
         <Title>
-          Humanizando Marcas
+        Dificuldades em {' '}
+        <strong className="font-black"> 
+          gerenciar as redes
+          sociais da sua empresa? 
+        </strong>
         </Title>
         <Paragraph>
-          <strong
-            className="font-bold"
-          > 
-            Nossa paixão {' '}
-          </strong>
-            é criar conexões autênticas entre negócios e clientes.
+          Entre em contacto connosco, vamos trabalhar juntos para descobrir as tuas necessidades e alcançar os teus objetivos da forma mais eficaz e inovadora possível
         </Paragraph>
         <Button>
-          Conheça a Kudika
+          Consulta grátis
         </Button>
+      </div>
+      <div className="w-[550] h-full md:flex items-center hidden">      
+        <Image
+          className="hidden md:block w-[550px] h-[446px]" 
+          src='/girl.png' 
+          width={550} 
+          height={420} 
+          alt="girl"
+        />
       </div>
     </Container>
   )

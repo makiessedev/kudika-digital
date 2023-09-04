@@ -5,7 +5,7 @@ export default function index() {
   return (
     <>
       <section 
-        className="flex flex-col items-center pt-28 px-6 lg:px-20 gap-8"
+        className="flex flex-col items-center pt-40 px-6 lg:px-20 gap-8"
         >
         
         <div
@@ -22,7 +22,7 @@ export default function index() {
           />
         </div>
         <section 
-          className="flex flex-col gap-6"
+          className="flex flex-col md:flex-row gap-6 md:gap-20 md:pt-5"
         >
           <div
             className="space-y-4"
