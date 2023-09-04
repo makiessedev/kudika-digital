@@ -1,12 +1,12 @@
-import Welcome from '@/components/Welcome'
-import HumanizingBrands from '@/components/HumanizingBrands'
-import SuccessCases from '@/components/SuccessCases'
-import Services from '@/components/Services'
-import { MarketingTransform } from '@/components/MarketingTransform'
-import { AllServices } from '@/components/AllServices'
-import { TalkToUsNow } from '@/components/TalkToUsNow'
-import { LearningToday } from '@/components/LearningToday'
-import { ContactForm } from '@/components/ContactForm'
+import Welcome from '@/components/Home/Welcome'
+import HumanizingBrands from '@/components/Home/HumanizingBrands'
+import SuccessCases from '@/components/Home/SuccessCases'
+import Services from '@/components/Home/Services'
+import { MarketingTransform } from '@/components/Home/MarketingTransform'
+import { AllServices } from '@/components/Home/AllServices'
+import { TalkToUsNow } from '@/components/Home/TalkToUsNow'
+import { LearningToday } from '@/components/Home/LearningToday'
+import { ContactForm } from '@/components/Home/ContactForm'
 
 export default function index() {
   return (
