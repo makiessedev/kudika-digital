@@ -2,12 +2,11 @@ import { Input } from "./Input";
 import { Title } from "./Title";
 import { SelectOption as Option } from "./SelectOption";
 import { Button } from "./Button";
+import { Container } from "./Container";
 
 export function ContactForm() {
   return (
-    <section
-      className="flex justify-center items-center gap-8 flex-col bg-[url('/background/bg-form.svg')] bg-cover px-6 lg:px-20 h-[600px]"
-    >
+    <Container>
       <Title>
         fale com o nosso especialista
       </Title>
@@ -35,6 +34,6 @@ export function ContactForm() {
         </div>
         <Button>Entrar em contacto</Button>
       </form>
-    </section>
+    </Container>
   )
 }
