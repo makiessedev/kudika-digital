@@ -1,11 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export function Container({ children }: { children: ReactNode }) {
   return (
-    <section 
-      className="px-6 lg:px-20 md:grid md:grid-cols-2 md:grid-flow-col pt-28 h-full"
-    >
-      { children }
+    <section className="h-full px-6 pt-28 md:grid md:grid-flow-col md:grid-cols-2 lg:px-20">
+      {children}
     </section>
   )
 }

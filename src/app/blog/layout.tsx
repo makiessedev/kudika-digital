@@ -1,4 +1,4 @@
-import { Subscribe } from "@/components/Blog/Subscribe"
+import { Subscribe } from '@/components/Blog/Subscribe'
 
 export default function RootLayout({
   children,
@@ -7,7 +7,7 @@ export default function RootLayout({
 }) {
   return (
     <>
-      { children }
+      {children}
       <Subscribe />
     </>
   )

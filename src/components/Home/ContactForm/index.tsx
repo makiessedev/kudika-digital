@@ -1,28 +1,24 @@
-import { Input } from "./Input";
-import { Title } from "./Title";
-import { SelectOption as Option } from "./SelectOption";
-import { Button } from "./Button";
-import { Container } from "./Container";
+import { Input } from './Input'
+import { Title } from './Title'
+import { SelectOption as Option } from './SelectOption'
+import { Button } from './Button'
+import { Container } from './Container'
 
 export function ContactForm() {
   return (
     <Container>
-      <Title>
-        fale com o nosso especialista
-      </Title>
-      <form 
-        className="flex flex-col items-center gap-6 md:gap-8"
-      >
-        <div 
-          className="grid md:grid-cols-2 gap-3"
-        >
+      <Title>fale com o nosso especialista</Title>
+      <form className="flex flex-col items-center gap-6 md:gap-8">
+        <div className="grid gap-3 md:grid-cols-2">
           <Input type="text" placeholder="Nome" />
           <Input type="email" placeholder="Email" />
           <Input type="text" placeholder="Telefone" />
           <Input type="text" placeholder="Empresa" />
 
-          <select name="" id=""
-            className="rounded-lg bg-red-500 border-2 border-white"
+          <select
+            name=""
+            id=""
+            className="rounded-lg border-2 border-white bg-red-500"
           >
             <Option value="">Em qual segmento a sua empresa atua?</Option>
             <Option value="">Agência de Marketing e Publicidade</Option>

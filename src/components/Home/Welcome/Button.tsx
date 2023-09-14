@@ -1,13 +1,13 @@
-import Link from "next/link";
-import { ReactNode } from "react";
+import Link from 'next/link'
+import { ReactNode } from 'react'
 
 export function Button({ children }: { children: ReactNode }) {
   return (
-    <Link 
-      className="flex items-center justify-center rounded-full uppercase text-white px-8 py-2 bg-red-500 font-bold text-[0.88rem]"
-      href='#!'
+    <Link
+      className="flex items-center justify-center rounded-full bg-red-500 px-8 py-2 text-[0.88rem] font-bold uppercase text-white"
+      href="#!"
     >
-      { children }
+      {children}
     </Link>
   )
 }

@@ -1,12 +1,12 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes } from 'react'
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {} 
+type InputProps = InputHTMLAttributes<HTMLInputElement>
 
-export function Input({...props}: InputProps) {
+export function Input({ ...props }: InputProps) {
   return (
-    <input 
-      className="rounded-lg bg-red-500 border-2 border-white placeholder:text-gray-100 placeholder:uppercase text-white"
-      { ...props }
+    <input
+      className="rounded-lg border-2 border-white bg-red-500 text-white placeholder:uppercase placeholder:text-gray-100"
+      {...props}
     />
   )
 }

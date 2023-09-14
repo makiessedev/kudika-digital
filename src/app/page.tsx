@@ -11,9 +11,9 @@ import { ContactForm } from '@/components/Home/ContactForm'
 export default function index() {
   return (
     <>
-      <Welcome/>
-      <HumanizingBrands/>
-      <SuccessCases/>
+      <Welcome />
+      <HumanizingBrands />
+      <SuccessCases />
       <Services />
       <MarketingTransform />
       <AllServices />

@@ -1,4 +1,4 @@
-import { OptionHTMLAttributes, ReactNode } from "react";
+import { OptionHTMLAttributes, ReactNode } from 'react'
 
 interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
   children: ReactNode
@@ -6,8 +6,8 @@ interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
 
 export function SelectOption({ children, ...props }: OptionProps) {
   return (
-    <option 
-      className="text-white"
-    { ...props }>{ children }</option>
+    <option className="text-white" {...props}>
+      {children}
+    </option>
   )
 }

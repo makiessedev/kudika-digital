@@ -1,16 +1,14 @@
-import Image from "next/image"
-import { FreeCheck } from "@/components/Blog/FreeCheck"
-import { Posts } from "@/components/Blog/Posts"
-import Link from "next/link"
-import { Header } from "@/components/Blog/Header"
-import { EmphasisPost } from "@/components/Blog/EmphasisPost"
+import { FreeCheck } from '@/components/Blog/FreeCheck'
+import { Posts } from '@/components/Blog/Posts'
+import { Header } from '@/components/Blog/Header'
+import { EmphasisPost } from '@/components/Blog/EmphasisPost'
 
 type PostProps = {
-    props: {
-    id: string,
-    title: string,
-    content: string,
-    author: string,
+  props: {
+    id: string
+    title: string
+    content: string
+    author: string
   }
 }
 
@@ -21,14 +19,12 @@ export default async function index() {
 
   return (
     <>
-      <section 
-        className="flex flex-col items-center pt-40 px-6 lg:px-20 gap-8"
-      >
-        <Header/>
+      <section className="flex flex-col items-center gap-8 px-6 pt-40 lg:px-20">
+        <Header />
         <EmphasisPost props={post.props} />
       </section>
-      <FreeCheck/>
-      <Posts/>
+      <FreeCheck />
+      <Posts />
     </>
   )
 }

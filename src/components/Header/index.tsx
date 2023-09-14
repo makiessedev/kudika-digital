@@ -14,32 +14,18 @@ export default function Header() {
   const isMobile = useMedia('(max-width: 767px)')
 
   return (
-    <HeaderContainer >
-      <div 
-        className='flex w-full md:w-[129px] h-full flex-row justify-between items-center'
-      >
+    <HeaderContainer>
+      <div className="flex h-full w-full flex-row items-center justify-between md:w-[129px]">
         <KudikaLogo />
         <HumburguerIcon setActiveMobileMenu={setActiveMobileMenu} />
       </div>
       <LinksContainer isMobile={!!isMobile} activeMobileMenu={activeMobileMenu}>
-        <Link href='#!'>
-          Home
-        </Link>
-        <Link href='#!'>
-          Solução
-        </Link>
-        <Link href='#!'>
-          Cases
-        </Link>
-        <Link href='#!'>
-          Serviços
-        </Link>
-        <Link href='#!'>
-          Blog
-        </Link>
-        <Link href='#!'>
-          Orçamento
-        </Link>
+        <Link href="#!">Home</Link>
+        <Link href="#!">Solução</Link>
+        <Link href="#!">Cases</Link>
+        <Link href="#!">Serviços</Link>
+        <Link href="#!">Blog</Link>
+        <Link href="#!">Orçamento</Link>
       </LinksContainer>
     </HeaderContainer>
   )

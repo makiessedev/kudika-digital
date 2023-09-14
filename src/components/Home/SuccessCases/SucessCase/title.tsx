@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export function Title({ children }: { children: ReactNode }) {
   return (
-    <h3
-      className="font-bold text-2xl md:text-4xl text-gray-500 uppercase"
-    >{children}</h3>
+    <h3 className="text-2xl font-bold uppercase text-gray-500 md:text-4xl">
+      {children}
+    </h3>
   )
 }

@@ -1,11 +1,5 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
-export function Paragraph({ children }: {children: ReactNode}) {
-  return (
-    <p
-      className="font-bold text-3xl text-gray-500/30"
-    >
-      { children }
-    </p>
-  )
+export function Paragraph({ children }: { children: ReactNode }) {
+  return <p className="text-3xl font-bold text-gray-500/30">{children}</p>
 }

@@ -6,12 +6,12 @@ interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string
 }
 
-export function Link({children, href, ...props}: LinkProps) {
+export function Link({ children, href, ...props }: LinkProps) {
   return (
-    <li 
-      className='text-center text-base md:text-base text-gray-500 font-semibold w-full py-4 md:px-3 transition ease-in-out duration-300 focus:text-red-500 hover:text-red-500'
-    >
-      <NextLink href={href} {...props} >{children}</NextLink>
+    <li className="w-full py-4 text-center text-base font-semibold text-gray-500 transition duration-300 ease-in-out hover:text-red-500 focus:text-red-500 md:px-3 md:text-base">
+      <NextLink href={href} {...props}>
+        {children}
+      </NextLink>
     </li>
   )
 }

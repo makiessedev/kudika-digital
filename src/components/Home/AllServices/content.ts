@@ -9,8 +9,8 @@ export const services = [
       'Marketing de conteúdo',
       'Email marketing',
       'Website',
-      'SEO'
-    ]
+      'SEO',
+    ],
   },
 
   {
@@ -22,19 +22,19 @@ export const services = [
       'Interação com seguidores',
       'Monitoramento de resultados',
       'Analize de desempenho',
-    ]
+    ],
   },
 
   {
     title: 'branding - 100K',
     imgSrc: '/icons/branding.svg',
     descriptions: [
-      'Identidade visual', 
+      'Identidade visual',
       'Criação de logotipos',
       'Seleção de cores',
       'Criação de padrões de design',
-      'Manual de identidade visual'
-    ]
+      'Manual de identidade visual',
+    ],
   },
 
   {
@@ -48,8 +48,8 @@ export const services = [
       'Redação de Conteúdo',
       'Cobertura em Redes Sociais',
       'Edição e Pós-produção',
-      'Entrega de Resultados'
-    ]
+      'Entrega de Resultados',
+    ],
   },
 
   {
@@ -61,8 +61,8 @@ export const services = [
       'Negociação e Contratação',
       'Gestão de Relacionamento',
       'Gerenciamento de Campanhas',
-      'Avaliação de Resultados'
-    ]
+      'Avaliação de Resultados',
+    ],
   },
 
   {
@@ -71,7 +71,7 @@ export const services = [
     descriptions: [
       'Desenvolvemos de websites modernos',
       'Aplicativos móveis intuitivos',
-      'Sistemas de software personalizados'
-    ]
-  }
+      'Sistemas de software personalizados',
+    ],
+  },
 ]

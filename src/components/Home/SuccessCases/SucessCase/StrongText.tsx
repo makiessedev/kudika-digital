@@ -1,9 +1,9 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 export function StrongText({ children }: { children: ReactNode }) {
   return (
-    <p
-      className="font-bold text-center text-base md:text-lg text-gray-500 md:w-[378px]"
-    >{children}</p>
+    <p className="text-center text-base font-bold text-gray-500 md:w-[378px] md:text-lg">
+      {children}
+    </p>
   )
 }

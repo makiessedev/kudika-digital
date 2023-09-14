@@ -1,7 +1,5 @@
 export function RedLine() {
   return (
-    <div 
-      className="mx-auto w-48 md:w-[180px] h-1 md:h-[14px] rounded bg-red-500"
-    />
+    <div className="mx-auto h-1 w-48 rounded bg-red-500 md:h-[14px] md:w-[180px]" />
   )
 }
