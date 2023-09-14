@@ -6,7 +6,7 @@ interface OptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
 
 export function SelectOption({ children, ...props }: OptionProps) {
   return (
-    <option className="text-white" {...props}>
+    <option className="mx-auto h-12 w-[356px] text-white" {...props}>
       {children}
     </option>
   )

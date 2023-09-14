@@ -20,7 +20,7 @@ export function ContactForm() {
             id=""
             className="rounded-lg border-2 border-white bg-red-500"
           >
-            <Option value="">Em qual segmento a sua empresa atua?</Option>
+            <Option value="">Tipo de Negócio</Option>
             <Option value="">Agência de Marketing e Publicidade</Option>
             <Option value="">Consultoria e treinamentos</Option>
             <Option value="">Eventos</Option>
