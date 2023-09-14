@@ -52,12 +52,9 @@ export async function Posts() {
               <span>17 Mar | Leitura: 9min</span>
             </FooterContainer>
 
-            <Link
-              className="rounded-3xl border border-gray-500/50 bg-white px-6 py-3 text-gray-500/50"
-              href={`/blog/post/${props.id}`}
-            >
-              Ler mais
-            </Link>
+            <button className="rounded-3xl border border-gray-500/50 bg-white px-6 py-3 text-gray-500/50">
+              <Link href={`/blog/post/${props.id}`}>Ler mais</Link>
+            </button>
           </PostContainer>
         ))}
       </PostsWrapper>

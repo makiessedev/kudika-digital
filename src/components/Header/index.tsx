@@ -20,11 +20,11 @@ export default function Header() {
         <HumburguerIcon setActiveMobileMenu={setActiveMobileMenu} />
       </div>
       <LinksContainer isMobile={!!isMobile} activeMobileMenu={activeMobileMenu}>
-        <Link href="#!">Home</Link>
+        <Link href="/">Home</Link>
         <Link href="#!">Solução</Link>
         <Link href="#!">Cases</Link>
         <Link href="#!">Serviços</Link>
-        <Link href="#!">Blog</Link>
+        <Link href="/blog">Blog</Link>
         <Link href="#!">Orçamento</Link>
       </LinksContainer>
     </HeaderContainer>

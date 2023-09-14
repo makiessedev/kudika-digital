@@ -38,10 +38,10 @@ export function Subscribe() {
         </Paragraph>
         <form className="flex flex-col items-center justify-center gap-4">
           <input
-            className="h-12 w-72 rounded-full border-2 border-white bg-red-500 text-white placeholder:text-white md:h-14 md:w-80"
+            className="h-12 w-72 rounded-full border-2 border-white bg-red-500 text-white placeholder:text-white/50 md:h-14 md:w-80"
             type="email"
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="seu email"
+            placeholder="seu@email.com"
           />
           <Button type="submit" onClick={handleClick}>
             Inscrever

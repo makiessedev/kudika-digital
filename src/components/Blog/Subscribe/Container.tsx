@@ -6,7 +6,7 @@ export function Container({ children }: { children: ReactNode }) {
     <div className="relative">
       <section className="flex items-center justify-center bg-red-500 px-6 md:py-8 lg:px-20">
         <Image
-          className="absolute left-0 right-0 top-0 block w-full"
+          className="absolute -top-[1px] left-0 right-0 block w-full"
           src="/background/bottom-white-wave.png"
           alt=""
           width={1280}
@@ -15,7 +15,7 @@ export function Container({ children }: { children: ReactNode }) {
         {children}
         <Image
           className="absolute -bottom-[1px] left-0 right-0 block w-full"
-          src="/background/top-white-wave.png"
+          src="/background/bottom-black-wave.png"
           alt=""
           width={1280}
           height={163}

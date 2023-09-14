@@ -40,7 +40,7 @@ export function EmphasisPost(post: PostProps) {
         </button>
       </div>
       <Image
-        className="hidden md:block"
+        className="hidden h-[349px] w-[545px] md:block"
         src="/blog/ig-blog.png"
         width={595}
         height={399}
