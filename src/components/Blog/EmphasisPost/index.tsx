@@ -14,14 +14,14 @@ type PostProps = {
 export function EmphasisPost(post: PostProps) {
   return (
     <Container>
+      <Image
+        className="mx-auto mt-6 block md:hidden"
+        src="/blog/ig-blog.png"
+        width={595}
+        height={399}
+        alt="computer"
+      />
       <div className="space-y-4">
-        <Image
-          className="md:hidden"
-          src="/blog/ig-blog.png"
-          width={595}
-          height={399}
-          alt="computer"
-        />
         <h3 className="text-center text-xl font-bold text-gray-500 md:text-left md:text-3xl">
           {post.props.title}
         </h3>
@@ -40,7 +40,7 @@ export function EmphasisPost(post: PostProps) {
         </button>
       </div>
       <Image
-        className="hidden md:block"
+        className="hidden md:my-auto md:block"
         src="/blog/ig-blog.png"
         width={595}
         height={399}
