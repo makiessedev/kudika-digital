@@ -10,16 +10,20 @@ export default function Footer() {
         <KudikaLogo/>
         
         <div
-          className='hidden md:block'
+          className='hidden md:block md:border-x md:border-white/25 md:px-5 lg:px-16'
         >
           <h4 className='text-gray-100 text-2xl font-extrabold uppercase mb-6'>Mapa do site</h4>
-          <ul className='flex flex-col text-gray-200 text-lg font-bold uppercase gap-3'>
-            <li>A Kudika</li>
-            <li>Soluções</li>
-            <li>Cases</li>
-            <li>Serviços</li>
-            <li>Blog</li>
-            <li>Orçamento</li>
+          <ul className='flex flex-row text-gray-200 text-lg font-bold uppercase gap-8'>
+            <div className='space-y-4'>
+              <li className='text-lg text-white font-bold uppercase'>A Kudika</li>
+              <li className='text-lg text-white font-bold uppercase'>Soluções</li>
+              <li className='text-lg text-white font-bold uppercase'>Orçamento</li>
+            </div>
+            <div className='space-y-4'>
+              <li className='text-lg text-white font-bold uppercase'>Cases</li>
+              <li className='text-lg text-white font-bold uppercase'>Serviços</li>
+              <li className='text-lg text-white font-bold uppercase'>Blog</li>
+            </div>
           </ul>
         </div>
 
@@ -48,7 +52,7 @@ export default function Footer() {
               <h5 className='text-lg text-white font-bold uppercase'>Redes sociais</h5>
 
               <section
-                className='flex gap-3'
+                className='flex gap-3 md:flex-wrap'
               >
                 <Image src='/icons/facebook.png' alt='facebook icon' width={50} height={50} />
                 <Image src='/icons/instagram.png' alt='instagram icon' width={50} height={50} />
