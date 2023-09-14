@@ -1,17 +1,18 @@
 import React from 'react'
-import { FacebookIcon, InstagramIcon, LinkedinIcon, YoutubeIcon } from 'lucide-react'
 import { KudikaLogo } from './KudikaLogo'
 import Image from 'next/image'
+import { Container } from './Container'
+import { CopyrightWrapper } from './CopyrightWrapper'
+import { SiteMapWrapper } from './SiteMapWrapper'
+import { SocialMidiaWrapper } from './SocialMidiaWrapper'
 
 export default function Footer() {
   return (
-    <footer className='flex flex-col items-center justify-center px-[65px] py-[50px] bg-gray-500'>
+    <Container>
       <section className='flex flex-col justify-center gap-4 md:flex-row md:justify-between'>
         <KudikaLogo/>
         
-        <div
-          className='hidden md:block md:border-x md:border-white/25 md:px-5 lg:px-16'
-        >
+        <SiteMapWrapper>
           <h4 className='text-gray-100 text-2xl font-extrabold uppercase mb-6'>Mapa do site</h4>
           <ul className='flex flex-row text-gray-200 text-lg font-bold uppercase gap-8'>
             <div className='space-y-4'>
@@ -25,7 +26,7 @@ export default function Footer() {
               <li className='text-lg text-white font-bold uppercase'>Blog</li>
             </div>
           </ul>
-        </div>
+        </SiteMapWrapper>
 
         <div>
           <h2 className='text-gray-100 text-2xl font-extrabold uppercase mb-6'>Contactos</h2>
@@ -51,22 +52,20 @@ export default function Footer() {
             >
               <h5 className='text-lg text-white font-bold uppercase'>Redes sociais</h5>
 
-              <section
-                className='flex gap-3 md:flex-wrap'
-              >
+              <SocialMidiaWrapper>
                 <Image src='/icons/facebook.png' alt='facebook icon' width={50} height={50} />
                 <Image src='/icons/instagram.png' alt='instagram icon' width={50} height={50} />
                 <Image src='/icons/linkedin.png' alt='linkedin icon' width={50} height={50} />
                 <Image src='/icons/whatsapp.png' alt='whatsapp icon' width={50} height={50} />
                 <Image src='/icons/youtube.png' alt='youtube icon' width={50} height={50} />
-              </section>
+              </SocialMidiaWrapper>
             </div>
           </div>
         </div>
       </section>
-      <section className='flex items-center justify-center text-white mt-10 md:mt-20'>
+      <CopyrightWrapper>
         <p>&copy; 2023 Kudika Digital</p>
-      </section>
-    </footer>
+      </CopyrightWrapper>
+    </Container>
   )
 }
