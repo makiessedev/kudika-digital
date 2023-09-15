@@ -3,8 +3,8 @@ import Image from 'next/image'
 
 export function Container({ children }: { children: ReactNode }) {
   return (
-    <div className="relative">
-      <section className="flex h-[700px] flex-col items-center justify-center gap-4 bg-red-500 px-6 lg:px-20">
+    <div className="relative py-12">
+      <section className="flex h-[700px] flex-col items-center justify-center gap-4 bg-red-500 px-6 py-12 lg:px-20">
         <Image
           className="absolute -top-1 left-0 right-0 block w-full"
           src="/background/bottom-white-wave.png"

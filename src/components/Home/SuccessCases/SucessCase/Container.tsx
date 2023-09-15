@@ -8,7 +8,7 @@ type ContainerProps = {
 export function Container({ imagePosition, children }: ContainerProps) {
   return (
     <section
-      className={`mb-6 md:my-20 md:flex md:flex-row md:justify-center xl:gap-20 ${
+      className={`mb-6 py-8 md:my-20 md:flex md:flex-row md:justify-center xl:gap-20 ${
         imagePosition === 'left' && 'md:flex-row-reverse'
       }`}
     >

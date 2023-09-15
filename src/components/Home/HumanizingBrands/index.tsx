@@ -3,6 +3,7 @@ import { Container } from './Container'
 import { Title } from './Title'
 import { Paragraph } from './Paragraph'
 import { Button } from './Button'
+import Boy from '../..//../../public/boy.png'
 
 export default function index() {
   return (
@@ -10,9 +11,8 @@ export default function index() {
       <div className="hidden h-[666px] w-[345px] items-center md:flex">
         <Image
           className="hidden h-[446px] w-[345px] md:block"
-          src="/boy.png"
-          width={565}
-          height={666}
+          src={Boy}
+          height={650}
           alt="girl"
         />
       </div>

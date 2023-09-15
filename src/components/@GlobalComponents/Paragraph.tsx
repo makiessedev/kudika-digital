@@ -2,7 +2,7 @@ import { ReactNode } from 'react'
 
 export function Paragraph({ children }: { children: ReactNode }) {
   return (
-    <p className="flex w-[300px] justify-center text-center font-bold uppercase text-gray-500 md:w-full md:text-left md:text-base">
+    <p className="w-[300px] text-center text-base font-normal text-gray-500 md:w-[370px] md:text-left">
       {children}
     </p>
   )

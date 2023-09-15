@@ -8,7 +8,7 @@ export function MarketingTransform() {
       <Title>
         Transforme seu marketing connosco juntos podemos fazer a diferença
       </Title>
-      <p className="text-center text-base font-normal uppercase text-white md:w-[649px]">
+      <p className="py-5 text-center text-xl font-normal text-white md:w-[440px]">
         Entre em contacto connosco, vamos trabalhar juntos para descobrir as
         tuas necessidades e alcançar os teus objetivos da forma mais eficaz e
         inovadora possível

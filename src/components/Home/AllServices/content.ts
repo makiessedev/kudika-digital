@@ -38,7 +38,7 @@ export const services = [
   },
 
   {
-    title: 'Cobertura de eventos',
+    title: 'Cobertura de eventos - Personalizado',
     imgSrc: '/icons/cobertura-de-eventos.svg',
     descriptions: [
       'Planejamento e Coordenação',

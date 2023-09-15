@@ -10,7 +10,7 @@ import { SocialMidiaWrapper } from './SocialMidiaWrapper'
 export default function Footer() {
   return (
     <Container>
-      <section className="flex flex-col justify-center gap-4 md:flex-row md:justify-between">
+      <section className="flex flex-col justify-center gap-12 md:flex-row md:justify-between">
         <KudikaLogo />
 
         <SiteMapWrapper>
@@ -64,7 +64,7 @@ export default function Footer() {
               <h5 className="text-lg font-bold  uppercase text-white">
                 E-mail
               </h5>
-              <span className="text-gray-100">contacto@kudikadigital.com</span>
+              <span className="text-gray-100">geral@kudikadigital.com</span>
             </div>
             <div className="space-y-3">
               <h5 className="text-lg font-bold uppercase text-white">
@@ -75,32 +75,32 @@ export default function Footer() {
                 <Image
                   src="/icons/facebook.png"
                   alt="facebook icon"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                 />
                 <Image
                   src="/icons/instagram.png"
                   alt="instagram icon"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                 />
                 <Image
                   src="/icons/linkedin.png"
                   alt="linkedin icon"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                 />
                 <Image
                   src="/icons/whatsapp.png"
                   alt="whatsapp icon"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                 />
                 <Image
                   src="/icons/youtube.png"
                   alt="youtube icon"
-                  width={50}
-                  height={50}
+                  width={30}
+                  height={30}
                 />
               </SocialMidiaWrapper>
             </div>

@@ -4,6 +4,7 @@ import { Paragraph } from './Paragraph'
 import { SucessCase } from './SucessCase'
 import { cases } from './SucessCase/cases'
 import { randomUUID } from 'crypto'
+import RedBar from '../../@GlobalComponents/RedBar'
 
 export default function index() {
   return (
@@ -15,7 +16,7 @@ export default function index() {
           Confia em nos e vê os resultados com seus proprios olhos.
         </Paragraph>
 
-        <div className="h-[10px] w-48 rounded bg-red-500 md:h-[14px] md:w-[180px]" />
+        <RedBar />
       </div>
       {cases.map(({ imagePosition, imgSrc, strongText, text, title }) => (
         <SucessCase

@@ -3,9 +3,11 @@ import { Title } from './Title'
 
 export function LearningToday() {
   return (
-    <section className="mb-6 mt-8 space-y-4 px-6 lg:px-20">
-      <Title>aprendizado de hoje</Title>
-      <Paragraph>Veja os últimos textos da equipe kudika digital</Paragraph>
+    <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
+      <div className="flex flex-col items-center gap-4">
+        <Title>aprendizado de hoje</Title>
+        <Paragraph>Veja os últimos textos da equipe kudika digital</Paragraph>
+      </div>
       <section className="md:grid md:grid-cols-2 lg:grid-cols-3">
         <div className="mb-4 flex h-[305px] items-center justify-center space-y-2 bg-red-500 p-7 text-2xl font-black text-gray-100 md:m-6">
           POST_1
