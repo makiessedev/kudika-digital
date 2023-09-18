@@ -2,8 +2,8 @@ import { ReactNode } from 'react'
 
 export function Title({ children }: { children: ReactNode }) {
   return (
-    <h1 className="text-6xl font-black uppercase text-gray-500/30 md:text-7xl">
+    <h2 className="text-center text-xl font-medium uppercase text-white md:text-left md:text-2xl xl:text-4xl">
       {children}
-    </h1>
+    </h2>
   )
 }
