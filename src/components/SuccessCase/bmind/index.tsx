@@ -4,7 +4,7 @@ export function Bmind() {
   return (
     <>
       <section className="mt-10 space-y-6 overflow-hidden md:space-y-20">
-        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-20">
           <div className="space-y-8 md:my-auto md:w-[300px]">
             <h3 className="text-center text-xl font-bold uppercase text-gray-500 md:text-left md:text-3xl">
               bminds - brilliant minds
@@ -30,7 +30,7 @@ export function Bmind() {
             </div>
           </div>
           <Image
-            className="hidden md:mx-auto md:inline-block"
+            className="hidden md:block"
             src="/success-case-bmind.png"
             width={623}
             height={345}
