@@ -1,14 +1,13 @@
 import Image from 'next/image'
-import React from 'react'
 
 export function KudikaLogo() {
   return (
     <Image
-      className="md:my-auto md:h-[108px] md:w-[180px] md:pr-8"
+      className="md:my-auto md:h-[95px] md:w-[180px] md:pr-8"
       src="/logo-white.png"
       alt="Kudika logo"
-      width={150}
-      height={150}
+      width={129}
+      height={3}
     />
   )
 }
