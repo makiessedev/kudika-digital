@@ -1,12 +1,19 @@
+import Link from 'next/link'
 import { Paragraph } from './Paragraph'
 import { Title } from './Title'
+import RedBar from '@/components/Global/RedBar'
 
 export function Header() {
   return (
-    <section className="space-y-2">
-      <Title>blog</Title>
-      <Paragraph>Fique ligado aos nossos artigos</Paragraph>
-      <div className="h-[3px] w-24 bg-red-500" />
-    </section>
+    <>
+      <Link
+        href="/blog"
+        className="flex flex-col items-start justify-start gap-3 py-12"
+      >
+        <Title>blog</Title>
+        <Paragraph>Fique ligado aos nossos artigos</Paragraph>
+        <RedBar />
+      </Link>
+    </>
   )
 }

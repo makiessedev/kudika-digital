@@ -38,7 +38,7 @@ export function Subscribe() {
         </Paragraph>
         <form className="flex flex-col items-center justify-center gap-4">
           <input
-            className="h-12 w-72 rounded-full border-2 border-white bg-red-500 text-white placeholder:text-white/50 md:h-14 md:w-80"
+            className="h-12 w-72 rounded-full border-2 border-white bg-red-500 p-5 text-white outline-none placeholder:text-white/50 md:h-12 md:w-72"
             type="email"
             onChange={(e) => setEmail(e.target.value)}
             placeholder="seu@email.com"

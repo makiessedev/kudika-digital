@@ -26,7 +26,7 @@ export function SucessCase({
         <Title>{title}</Title>
         <StrongText>{strongText}</StrongText>
         <Text>{text}</Text>
-        <Button>conheça esse case</Button>
+        <Button>conheça este case</Button>
       </div>
       <Image
         className="hidden lg:block"
