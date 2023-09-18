@@ -4,7 +4,7 @@ import { Paragraph } from './Paragraph'
 import { SucessCase } from './SucessCase'
 import { cases } from './SucessCase/cases'
 import { randomUUID } from 'crypto'
-import RedBar from '../../@GlobalComponents/RedBar'
+import RedBar from '../../Global/RedBar'
 
 export default function index() {
   return (

@@ -44,7 +44,7 @@ export function Subscribe() {
             placeholder="seu@email.com"
           />
           <Button type="submit" onClick={handleClick}>
-            Inscrever
+            Enviar
           </Button>
         </form>
       </div>

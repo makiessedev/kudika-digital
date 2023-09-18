@@ -4,7 +4,7 @@ import { ReactNode } from 'react'
 export function Button({ children }: { children: ReactNode }) {
   return (
     <Link
-      className="flex h-12 w-72 items-center justify-center rounded-full bg-red-500 text-lg font-black uppercase text-white md:mx-auto md:h-14 md:w-80"
+      className="mt-10 flex items-center justify-center rounded-full bg-red-500 px-8 py-2 text-[0.88rem] font-bold uppercase text-white"
       href="#!"
     >
       {children}

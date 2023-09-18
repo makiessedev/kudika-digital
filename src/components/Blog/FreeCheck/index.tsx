@@ -7,7 +7,7 @@ import { Button } from './Button'
 export function FreeCheck() {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center space-y-4 py-20 md:-mt-2 md:items-start md:space-y-6 md:py-0 md:pt-14">
+      <div className="flex flex-col items-center justify-center space-y-4 py-20 md:-mt-2 md:items-start md:space-y-6 md:py-12 md:pt-10">
         <Title>
           Dificuldades em{' '}
           <strong className="font-black">
@@ -23,7 +23,7 @@ export function FreeCheck() {
       </div>
       <div className="hidden h-full w-[550] items-center md:flex">
         <Image
-          className="hidden h-[446px] w-[550px] md:block"
+          className="hidden h-[446px] w-[500px] md:block"
           src="/girl.png"
           width={550}
           height={420}

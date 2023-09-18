@@ -5,7 +5,7 @@ import { ListItem } from './ListItem'
 import { ServiceContainer } from './ServiceContainer'
 import { services } from './content'
 import { randomUUID } from 'crypto'
-import RedBar from '@/components/@GlobalComponents/RedBar'
+import RedBar from '@/components/Global/RedBar'
 
 export function AllServices() {
   return (
