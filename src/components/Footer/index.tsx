@@ -1,4 +1,5 @@
 /* eslint-disable no-irregular-whitespace */
+'use client'
 import React from 'react'
 import { KudikaLogo } from './KudikaLogo'
 import Image from 'next/image'
@@ -6,10 +7,22 @@ import { Container } from './Container'
 import { CopyrightWrapper } from './CopyrightWrapper'
 import { SiteMapWrapper } from './SiteMapWrapper'
 import { SocialMidiaWrapper } from './SocialMidiaWrapper'
+import ScrollToTop from 'react-scroll-to-top'
 
 export default function Footer() {
   return (
     <Container>
+      <ScrollToTop
+        height="19px"
+        smooth
+        color="#BF0F0F"
+        top={150}
+        style={{
+          padding: '6px',
+          borderRadius: '12px',
+          fontSize: '10px',
+        }}
+      ></ScrollToTop>
       <section className="flex flex-col justify-center gap-12 md:flex-row md:justify-between">
         <KudikaLogo />
 

@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 
 import { Link } from './Link'
+import NextLink from 'next/link'
 import { HumburguerIcon } from './HumburguerIcon'
 import { HeaderContainer } from './HeaderContainer'
 import { useMedia } from '@/Hooks/useMedia'
@@ -16,7 +17,9 @@ export default function Header() {
   return (
     <HeaderContainer>
       <div className="flex h-full w-full flex-row items-center justify-between md:w-[129px]">
-        <KudikaLogo />
+        <NextLink href="/">
+          <KudikaLogo />
+        </NextLink>
         <HumburguerIcon setActiveMobileMenu={setActiveMobileMenu} />
       </div>
       <LinksContainer isMobile={!!isMobile} activeMobileMenu={activeMobileMenu}>

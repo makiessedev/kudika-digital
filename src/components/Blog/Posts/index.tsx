@@ -22,7 +22,7 @@ type Post = {
 }
 
 export async function Posts() {
-  const response = await fetch("http://localhost:3000/post/all", {
+  const response = await fetch('http://localhost:3000/post/all', {
     next: {
       revalidate: 5,
     },
@@ -62,7 +62,7 @@ export async function Posts() {
           </PostContainer>
         ))}
       </PostsWrapper>
-      <Button>ver mais posts</Button>
+      <Button>ver mais</Button>
     </Container>
   )
 }
