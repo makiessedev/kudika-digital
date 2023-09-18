@@ -3,9 +3,9 @@ import Image from 'next/image'
 export function Bmind() {
   return (
     <>
-      <section className="mt-10 space-y-6 md:space-y-20">
-        <div className="space-y-4 md:flex md:space-x-10">
-          <div className="space-y-8 md:my-auto">
+      <section className="mt-10 space-y-6 overflow-hidden md:space-y-20">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
+          <div className="space-y-8 md:my-auto md:w-[300px]">
             <h3 className="text-center text-xl font-bold uppercase text-gray-500 md:text-left md:text-3xl">
               bminds - brilliant minds
             </h3>
@@ -16,7 +16,7 @@ export function Bmind() {
               height={365}
               alt="bmind"
             />
-            <div className="space-y-2 md:w-[461px]">
+            <div className="space-y-2 lg:w-[461px]">
               <p className="text-center text-base font-normal text-gray-500 md:text-left">
                 O BMinds é um case de sucesso excepcional, onde nós Kudika
                 Digital tivemos um papel fundamental em seu lançamento
@@ -30,7 +30,7 @@ export function Bmind() {
             </div>
           </div>
           <Image
-            className="hidden md:block"
+            className="hidden md:mx-auto md:inline-block"
             src="/success-case-bmind.png"
             width={623}
             height={345}
@@ -40,7 +40,14 @@ export function Bmind() {
         <h4 className="text-center text-3xl font-bold uppercase text-gray-500">
           estratégia
         </h4>
-        <div className="space-y-4 md:flex md:flex-row-reverse md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
+          <Image
+            className="hidden md:block"
+            src="/success-case-bmind.png"
+            width={683}
+            height={365}
+            alt="bmind"
+          />
           <div className="space-y-2 md:my-auto">
             <p className="text-center text-base font-normal text-gray-500 md:text-left">
               Nossa equipe de estratégia desenvolveu uma visão clara e objetivos
@@ -53,13 +60,6 @@ export function Bmind() {
               Angola e além.
             </p>
           </div>
-          <Image
-            className="hidden md:block"
-            src="/success-case-bmind.png"
-            width={683}
-            height={365}
-            alt="bmind"
-          />
         </div>
 
         <div className="flex-col items-center md:flex">
@@ -71,7 +71,7 @@ export function Bmind() {
           </p>
         </div>
 
-        <div className="space-y-4 md:flex md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
           <div className="space-y-2 md:my-auto">
             <p className="text-center text-base font-normal text-gray-500 md:text-left">
               A equipe de design da Kudika Digital concentrou-se em criar uma
@@ -98,7 +98,14 @@ export function Bmind() {
           Social Mídia
         </h5>
 
-        <div className="space-y-4 md:flex md:flex-row-reverse md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
+          <Image
+            className="hidden md:block"
+            src="/success-case-bmind.png"
+            width={683}
+            height={365}
+            alt="bmind"
+          />
           <div className="space-y-2 md:my-auto">
             <p className="text-center text-base font-normal text-gray-500 md:text-left">
               A divulgação nas redes sociais foi uma parte crucial do sucesso do
@@ -115,20 +122,13 @@ export function Bmind() {
               tempo.
             </p>
           </div>
-          <Image
-            className="hidden md:block"
-            src="/success-case-bmind.png"
-            width={683}
-            height={365}
-            alt="bmind"
-          />
         </div>
 
         <h5 className="text-center text-3xl font-bold uppercase text-gray-500">
           website
         </h5>
 
-        <div className="space-y-4 md:flex md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
           <div className="space-y-2 md:my-auto">
             <p className="text-center text-base font-normal text-gray-500 md:text-left">
               O website do BMinds foi uma peça central para o sucesso do evento.
@@ -157,7 +157,14 @@ export function Bmind() {
           resultados
         </h5>
 
-        <div className="space-y-4 md:flex md:flex-row-reverse md:space-x-10">
+        <div className="space-y-4 md:grid md:grid-flow-col md:space-x-10">
+          <Image
+            className="hidden md:block"
+            src="/success-case-bmind.png"
+            width={683}
+            height={365}
+            alt="bmind"
+          />
           <div className="space-y-2 md:my-auto">
             <p className="text-center text-base font-normal text-gray-500 md:text-left">
               O evento se tornou um marco de sucesso, superando as expectativas
@@ -171,13 +178,6 @@ export function Bmind() {
               empreendedorismo e networking no país.
             </p>
           </div>
-          <Image
-            className="hidden md:block"
-            src="/success-case-bmind.png"
-            width={683}
-            height={365}
-            alt="bmind"
-          />
         </div>
       </section>
     </>

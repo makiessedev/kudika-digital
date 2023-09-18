@@ -14,7 +14,7 @@ export function Container({ children }: { children: ReactNode }) {
         />
         {children}
         <Image
-          className="absolute -bottom-[10px] left-0 right-0 block w-full lg:-bottom-[4px]"
+          className="absolute -bottom-[10px] left-0 right-0 block w-full lg:-bottom-[20px]"
           src="/background/bottom-black-wave.png"
           alt=""
           width={1280}
