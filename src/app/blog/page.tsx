@@ -16,7 +16,6 @@ export default async function index() {
   const response = await fetch('http://localhost:3000/post/all')
   const json = await response.json()
   const post: PostProps = json[0]
-  console.log(post)
 
   return (
     <>
