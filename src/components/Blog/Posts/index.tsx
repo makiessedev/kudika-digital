@@ -14,6 +14,7 @@ type Post = {
   props: {
     id: string
     title: string
+    imageUrl: string
     description: string
     content: string
     author: string
@@ -36,7 +37,7 @@ export async function Posts() {
         {posts.map(({ props }) => (
           <PostContainer key={randomUUID()}>
             <Image
-              src="/blog/ig-blog.png"
+              src={props.imageUrl}
               width={595}
               height={399}
               alt="computer"

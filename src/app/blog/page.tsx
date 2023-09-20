@@ -13,20 +13,9 @@ type PostProps = {
 }
 
 export default async function index() {
-  try {
-    const response = await fetch(
-      'http://localhost:3000/post/1ca017d9-297e-4a4e-843c-801642430c1c',
-    )
-    const json = await response.json()
-  } catch (error) {
-    console.log(error)
-  }
-
-  const response = await fetch(
-    'http://localhost:3000/post/1ca017d9-297e-4a4e-843c-801642430c1c',
-  )
+  const response = await fetch('http://localhost:3000/post/all')
   const json = await response.json()
-  const post: PostProps = json
+  const post: PostProps = json[0]
   console.log(post)
 
   return (
