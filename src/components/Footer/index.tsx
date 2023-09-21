@@ -23,7 +23,7 @@ export default function Footer() {
           fontSize: '10px',
         }}
       ></ScrollToTop>
-      <section className="flex flex-col justify-center gap-12 md:flex-row md:justify-between">
+      <section className="flex flex-col justify-center gap-12 md:flex-row md:justify-between md:gap-0">
         <KudikaLogo />
 
         <SiteMapWrapper>
