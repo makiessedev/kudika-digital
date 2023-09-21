@@ -1,10 +1,14 @@
+import Image from 'next/image'
 import { Paragraph } from './Paragraph'
 import { Title } from './Title'
+import { redirect } from 'next/navigation'
+import { Post } from './Post'
 
 type PostProps = {
   props: {
     id: string
     title: string
+    imageUrl: string
     content: string
     author: string
   }
@@ -13,7 +17,10 @@ type PostProps = {
 export async function LearningToday() {
   const response = await fetch('http://localhost:3000/post/all')
   const json = await response.json()
-  const allPost: PostProps = json
+  const allPost: PostProps[] = json
+  const lastThreePosts = allPost.slice(-3)
+
+  console.log(lastThreePosts)
 
   return (
     <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
@@ -22,16 +29,9 @@ export async function LearningToday() {
         <Paragraph>Veja os últimos textos da equipe kudika digital</Paragraph>
       </div>
       <section className="md:grid md:grid-cols-2 lg:grid-cols-3">
-        {}
-        <div className="mb-4 flex h-[305px] items-center justify-center space-y-2 bg-red-500 p-7 text-2xl font-black text-gray-100 md:m-6">
-          POST_1
-        </div>
-        <div className="mb-4 flex h-[305px] items-center justify-center space-y-2 bg-red-500 p-7 text-2xl font-black text-gray-100 md:m-6">
-          POST_2
-        </div>
-        <div className="mb-4 flex h-[305px] items-center justify-center space-y-2 bg-red-500 p-7 text-2xl font-black text-gray-100 md:m-6">
-          POST_3
-        </div>
+        {lastThreePosts.map(({ props }) => (
+          <Post key={props.id} props={props} />
+        ))}
       </section>
     </section>
   )

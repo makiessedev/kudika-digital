@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-export function ServiceOnDesktop() {
+export function SolutionOnDesktop() {
   return (
     <section className="mt-10 flex flex-col">
       <div className="flex">

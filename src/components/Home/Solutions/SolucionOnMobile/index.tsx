@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-export function ServiceOnMobile() {
+export function SolutionOnMobile() {
   return (
     <section>
       <span className=" h-15 mr-3 inline-block w-8 bg-red-500 py-3 text-center text-3xl font-bold text-gray-100 md:block">

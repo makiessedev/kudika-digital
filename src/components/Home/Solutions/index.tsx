@@ -4,8 +4,8 @@ import { Container } from './Container'
 import { Title } from './Title'
 import { Paragraph } from './Paragraph'
 import { useMedia } from '@/Hooks/useMedia'
-import { ServiceOnMobile } from './ServiceOnMobile'
-import { ServiceOnDesktop } from './ServiceOnDesktop'
+import { SolutionOnMobile } from './SolucionOnMobile'
+import { SolutionOnDesktop } from './SolutionOnDesktop'
 
 export default function Index() {
   const isMobile = useMedia('(max-width: 767px)')
@@ -19,7 +19,7 @@ export default function Index() {
           necessidade
         </Paragraph>
       </div>
-      {isMobile ? <ServiceOnMobile /> : <ServiceOnDesktop />}
+      {isMobile ? <SolutionOnMobile /> : <SolutionOnDesktop />}
     </Container>
   )
 }

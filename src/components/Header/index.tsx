@@ -24,9 +24,9 @@ export default function Header() {
       </div>
       <LinksContainer isMobile={!!isMobile} activeMobileMenu={activeMobileMenu}>
         <Link href="/">Home</Link>
-        <Link href="#!">Solução</Link>
-        <Link href="#!">Cases</Link>
-        <Link href="#!">Serviços</Link>
+        <Link href="/#solutions">Solução</Link>
+        <Link href="/#cases">Cases</Link>
+        <Link href="/#services">Serviços</Link>
         <Link href="/blog">Blog</Link>
         <Link href="#!">Orçamento</Link>
       </LinksContainer>
