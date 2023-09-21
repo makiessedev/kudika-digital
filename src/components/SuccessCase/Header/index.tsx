@@ -3,13 +3,16 @@ import { Paragraph } from './Paragraph'
 import { RedLine } from './RedLine'
 import { Title } from './Title'
 
-export function Header() {
+type HeaderProps = {
+  title: string
+  text: string
+}
+
+export function Header({ text, title }: HeaderProps) {
   return (
     <Container>
-      <Title>bminds</Title>
-      <Paragraph>
-        O Lançamento da Maior Plataforma de Networking de Angola
-      </Paragraph>
+      <Title>{title}</Title>
+      <Paragraph>{text}</Paragraph>
       <RedLine />
     </Container>
   )

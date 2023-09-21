@@ -20,8 +20,6 @@ export async function LearningToday() {
   const allPost: PostProps[] = json
   const lastThreePosts = allPost.slice(-3)
 
-  console.log(lastThreePosts)
-
   return (
     <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
       <div className="flex flex-col items-center gap-4">

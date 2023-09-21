@@ -1,11 +1,17 @@
 import Link from 'next/link'
-import { ReactNode } from 'react'
+import { AnchorHTMLAttributes, ReactNode } from 'react'
 
-export function Button({ children }: { children: ReactNode }) {
+interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  children: ReactNode
+  href: string
+}
+
+export function Button({ children, href, ...props }: ButtonProps) {
   return (
     <Link
       className="flex items-center justify-center rounded-full bg-red-500 px-8 py-2 text-[0.88rem] font-bold uppercase text-white"
-      href="#!"
+      href={href}
+      {...props}
     >
       {children}
     </Link>

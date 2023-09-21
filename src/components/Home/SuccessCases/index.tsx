@@ -1,8 +1,8 @@
 import { Container } from './Container'
 import { Title } from './Title'
 import { Paragraph } from './Paragraph'
-import { SucessCase } from './SucessCase'
-import { cases } from './SucessCase/cases'
+import { Case } from './Case'
+import { cases } from './Case/cases'
 import { randomUUID } from 'crypto'
 import RedBar from '../../Global/RedBar'
 
@@ -18,10 +18,11 @@ export default function index() {
 
         <RedBar />
       </div>
-      {cases.map(({ imagePosition, imgSrc, strongText, text, title }) => (
-        <SucessCase
+      {cases.map(({ imagePosition, imgSrc, strongText, link, text, title }) => (
+        <Case
           key={randomUUID()}
           title={title}
+          link={link}
           strongText={strongText}
           text={text}
           imgSrc={imgSrc}

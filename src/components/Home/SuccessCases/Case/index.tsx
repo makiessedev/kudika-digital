@@ -8,14 +8,16 @@ import { Text } from './Text'
 type SuccessCaseProps = {
   imagePosition: string | 'left' | 'right'
   title: string
+  link: string
   strongText: string
   text: string
   imgSrc: string
 }
 
-export function SucessCase({
+export function Case({
   imagePosition,
   imgSrc,
+  link,
   strongText,
   text,
   title,
@@ -26,7 +28,7 @@ export function SucessCase({
         <Title>{title}</Title>
         <StrongText>{strongText}</StrongText>
         <Text>{text}</Text>
-        <Button>conheça este case</Button>
+        <Button href={link}>conheça este case</Button>
       </div>
       <Image
         className="hidden lg:block"
