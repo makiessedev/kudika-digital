@@ -52,7 +52,7 @@ export default function Footer() {
           </ul>
         </SiteMapWrapper>
 
-        <div>
+        <div className="ml-8">
           <h2 className="mb-6 text-2xl font-extrabold uppercase text-gray-100">
             Contactos
           </h2>
