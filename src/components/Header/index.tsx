@@ -9,6 +9,7 @@ import { HeaderContainer } from './HeaderContainer'
 import { useMedia } from '@/Hooks/useMedia'
 import { LinksContainer } from './LinksContainer'
 import { KudikaLogo } from './KudikaLogo'
+import { BlogLink } from './BlogLink'
 
 export default function Header() {
   const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
@@ -41,12 +42,12 @@ export default function Header() {
         <Link href="/#services" onClick={closeMenu}>
           Serviços
         </Link>
-        <Link href="/blog" onClick={closeMenu}>
-          Blog
-        </Link>
         <Link href="#!" onClick={closeMenu}>
           Orçamento
         </Link>
+        <BlogLink href="/blog" onClick={closeMenu}>
+          Blog
+        </BlogLink>
       </LinksContainer>
     </HeaderContainer>
   )
