@@ -13,7 +13,7 @@ export function LinksContainer({
 }: LinksContainer) {
   return (
     <ul
-      className={`flex flex-col items-center justify-center md:flex-row md:justify-end ${
+      className={`flex flex-col items-center justify-center rounded-b bg-white shadow md:flex-row md:justify-end md:rounded-none md:shadow-none ${
         isMobile && !activeMobileMenu && 'hidden'
       }`}
     >

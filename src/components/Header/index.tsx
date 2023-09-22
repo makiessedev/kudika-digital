@@ -14,6 +14,12 @@ export default function Header() {
   const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
   const isMobile = useMedia('(max-width: 767px)')
 
+  function closeMenu() {
+    setTimeout(() => {
+      setActiveMobileMenu((value) => value === false)
+    }, 200)
+  }
+
   return (
     <HeaderContainer>
       <div className="flex h-full w-full flex-row items-center justify-between md:w-[129px]">
@@ -23,12 +29,24 @@ export default function Header() {
         <HumburguerIcon setActiveMobileMenu={setActiveMobileMenu} />
       </div>
       <LinksContainer isMobile={!!isMobile} activeMobileMenu={activeMobileMenu}>
-        <Link href="/">Home</Link>
-        <Link href="/#solutions">Solução</Link>
-        <Link href="/#cases">Cases</Link>
-        <Link href="/#services">Serviços</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="#!">Orçamento</Link>
+        <Link href="/" onClick={closeMenu}>
+          Home
+        </Link>
+        <Link href="/#solutions" onClick={closeMenu}>
+          Solução
+        </Link>
+        <Link href="/#cases" onClick={closeMenu}>
+          Cases
+        </Link>
+        <Link href="/#services" onClick={closeMenu}>
+          Serviços
+        </Link>
+        <Link href="/blog" onClick={closeMenu}>
+          Blog
+        </Link>
+        <Link href="#!" onClick={closeMenu}>
+          Orçamento
+        </Link>
       </LinksContainer>
     </HeaderContainer>
   )
