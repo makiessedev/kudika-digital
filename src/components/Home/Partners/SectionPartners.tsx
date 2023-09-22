@@ -21,6 +21,7 @@ export default function SectionPartners({
         href={link}
       >
         <Image
+          className="w-32"
           src={imagePartners}
           alt={title}
           width={60}

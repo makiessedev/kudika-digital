@@ -20,7 +20,9 @@ export function ContactForm() {
             id=""
             className="w-[350px] rounded-lg border-2 border-white bg-red-500 font-black text-gray-100"
           >
-            <Option> A SUA EMPRESA</Option>
+            <option className="max-w-full bg-white uppercase text-gray-500">
+              Área de atuação da sua empresa
+            </option>
             <Option>Agência de Marketing e Publicidade</Option>
             <Option>Agronegócio</Option>
             <Option>Atacado Distribuidor</Option>

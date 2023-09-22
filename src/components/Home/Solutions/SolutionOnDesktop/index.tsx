@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { Position } from './Position'
 import { Title } from './Title'
 import { Description } from './Description'

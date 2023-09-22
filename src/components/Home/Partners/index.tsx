@@ -6,10 +6,10 @@ import { randomUUID } from 'crypto'
 
 export function Partners() {
   return (
-    <section className="flex flex-col items-center px-6 py-12 md:mt-6 lg:px-20">
+    <section className="gap-6 space-y-10 px-6 py-12 md:flex md:flex-col md:items-center md:justify-center">
       <section className="flex flex-col items-center justify-center">
         <Title>Parceiros</Title>
-        <div className="lg:flxe-row flex flex-col items-center justify-center gap-16 py-16 md:flex-row xl:flex-row">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           {data.map(({ image, link, title }) => (
             <SectionPartners
               key={randomUUID()}
@@ -20,7 +20,7 @@ export function Partners() {
           ))}
         </div>
       </section>
-      <section>
+      <section className="flex flex-col items-center">
         <Title>Produtos</Title>
         <SectionProdcts />
       </section>
