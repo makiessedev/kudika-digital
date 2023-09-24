@@ -8,9 +8,9 @@ import Boy from '../..//../../public/boy.png'
 export default function index() {
   return (
     <Container>
-      <div className="hidden h-[666px] w-[345px] items-center md:flex">
+      <div className="hidden h-[666px] w-[365px] items-center md:flex">
         <Image
-          className="hidden h-[446px] w-[345px] md:block"
+          className="hidden h-[446px] w-[365px] md:block"
           src={Boy}
           height={650}
           alt="girl"

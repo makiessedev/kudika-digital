@@ -9,7 +9,10 @@ import RedBar from '@/components/Global/RedBar'
 
 export function AllServices() {
   return (
-    <section className="flex flex-col items-center px-6 py-10 md:mt-6 lg:px-20">
+    <section
+      id="services"
+      className="flex flex-col items-center px-6 py-10 md:mt-6 lg:px-20"
+    >
       <Title>
         O que <br className="md:hidden" /> oferecemos
       </Title>
