@@ -1,6 +1,5 @@
 'use client'
 
-import { Position } from './Position'
 import { Title } from './Title'
 import { Description } from './Description'
 import { content } from '../Content'
