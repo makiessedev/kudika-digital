@@ -9,7 +9,7 @@ import RedBar from '../../Global/RedBar'
 export default function index() {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center space-y-4 py-9 md:-mt-2 md:space-y-6 md:py-0">
+      <div className="flex flex-col items-center justify-center space-y-4 py-9 md:-mt-2 md:space-y-2 md:py-0">
         <Title>Casos de sucesso</Title>
 
         <Paragraph>

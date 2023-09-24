@@ -5,8 +5,8 @@ export function Image({ alt, src }: { src: string; alt: string }) {
     <NextImage
       className="hidden md:block"
       src={src}
-      width={683}
-      height={365}
+      width={623}
+      height={345}
       alt={alt}
     />
   )

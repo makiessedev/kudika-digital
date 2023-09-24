@@ -8,7 +8,7 @@ export default function index() {
   return (
     <>
       <Container>
-        <div className="flex flex-col items-center justify-center space-y-4 py-9 font-montserrat md:-mt-2 md:items-start md:space-y-6 md:py-0">
+        <div className="flex flex-col items-center justify-center space-y-4 pb-9 font-montserrat md:-mt-2 md:items-start md:space-y-6 md:py-0">
           <Title>Marketing e Publicidade</Title>
           <Paragraph>
             <span className="font-bold">
@@ -19,7 +19,7 @@ export default function index() {
           <Button>Consulta grátis</Button>
         </div>
         <Image
-          className="hidden md:block"
+          className="mx-auto w-96 md:w-[550px]"
           src="/girl.png"
           width={550}
           height={420}

@@ -19,7 +19,7 @@ export function Inefor() {
           title="inefor corporate"
         />
         {content.map(({ description, imagePosition, paragraphs, title }) => (
-          <>
+          <div key={randomUUID()} className="flex flex-col items-center gap-8">
             {description ? (
               <div className="flex-col items-center md:flex">
                 <Title>{title}</Title>
@@ -30,13 +30,13 @@ export function Inefor() {
             )}
             <div
               key={randomUUID()}
-              className="space-y-4 md:grid md:grid-flow-col md:space-x-10"
+              className="md-space-y-auto space-y-4 md:grid md:grid-flow-col md:space-x-10"
             >
               {imagePosition === 'left' && (
                 <Image src="/success-case-bmind.png" alt="bmind" />
               )}
 
-              <div className="space-y-2 md:my-auto">
+              <div className="space-y-2 md:my-auto md:flex md:w-[460px] md:flex-col md:justify-center">
                 {paragraphs.map((text) => (
                   <Paragraph key={randomUUID()}>{text}</Paragraph>
                 ))}
@@ -45,7 +45,7 @@ export function Inefor() {
                 <Image src="/success-case-bmind.png" alt="bmind" />
               )}
             </div>
-          </>
+          </div>
         ))}
       </section>
     </>

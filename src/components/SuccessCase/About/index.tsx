@@ -11,7 +11,7 @@ interface AboutProps {
 
 export function About({ imageSrc, paragraphs, title }: AboutProps) {
   return (
-    <div className="space-y-4 md:grid md:grid-flow-col md:space-x-20">
+    <div className="justify-center space-y-4 md:flex md:space-x-48">
       <div className="space-y-8 md:my-auto md:w-[300px]">
         <Title>{title}</Title>
         <Image
