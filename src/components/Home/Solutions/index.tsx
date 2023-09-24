@@ -3,12 +3,12 @@
 import { Container } from './Container'
 import { Title } from './Title'
 import { Paragraph } from './Paragraph'
-import { useMedia } from '@/Hooks/useMedia'
-import { SolutionOnMobile } from './SolucionOnMobile'
+/* import { useMedia } from '@/Hooks/useMedia'
+import { SolutionOnMobile } from './SolucionOnMobile' */
 import { SolutionOnDesktop } from './SolutionOnDesktop'
 
 export default function Index() {
-  const isMobile = useMedia('(max-width: 767px)')
+  // const isMobile = useMedia('(max-width: 767px)')
   return (
     <Container>
       <div className="flex flex-col items-center justify-center space-y-4 py-9 md:space-y-6 md:py-0 md:pt-8">
@@ -19,7 +19,7 @@ export default function Index() {
           necessidade
         </Paragraph>
       </div>
-      {isMobile ? <SolutionOnMobile /> : <SolutionOnDesktop />}
+      <SolutionOnDesktop />
     </Container>
   )
 }
