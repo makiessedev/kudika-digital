@@ -14,7 +14,6 @@ type PostProps = {
 
 export function Post(post: any) {
   const router = useRouter()
-  console.log(JSON.stringify(post, null, 2))
 
   return (
     <div
