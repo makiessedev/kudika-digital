@@ -1,4 +1,5 @@
 import { Post } from '@/components/Blog/Post'
+import { createClient } from '@/prismicio'
 
 type Slug = {
   params: {
@@ -6,22 +7,17 @@ type Slug = {
   }
 }
 
-type Post = {
-  props: {
+type PostProps = {
+  data: {
     title: string
-    content: string
     description: string
+    content: string
   }
 }
 
 export default async function index({ params }: Slug) {
-  const response = await fetch(`http://localhost:3000/post/${params.id}`, {
-    next: {
-      revalidate: 5,
-    },
-  })
+  const prismic = createClient()
+  const post: any = await prismic.getByUID('post', params.id)
 
-  const post: Post = await response.json()
-
-  return <Post props={post.props} />
+  return <Post data={post} />
 }

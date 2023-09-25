@@ -3,6 +3,7 @@ import { Paragraph } from './Paragraph'
 import { Title } from './Title'
 import { redirect } from 'next/navigation'
 import { Post } from './Post'
+import { createClient } from '@/prismicio'
 
 type PostProps = {
   props: {
@@ -15,10 +16,11 @@ type PostProps = {
 }
 
 export async function LearningToday() {
-  const response = await fetch('http://localhost:3000/post/all')
-  const json = await response.json()
-  const allPost: PostProps[] = json
-  const lastThreePosts = allPost.slice(-3)
+  const prismic = createClient()
+  const posts = await prismic.getAllByType('post')
+  const lastThreePosts = posts.slice(-3)
+
+  
 
   return (
     <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
@@ -27,8 +29,8 @@ export async function LearningToday() {
         <Paragraph>Veja os últimos textos da equipe kudika digital</Paragraph>
       </div>
       <section className="md:grid md:grid-cols-2 lg:grid-cols-3">
-        {lastThreePosts.map(({ props }) => (
-          <Post key={props.id} props={props} />
+        {lastThreePosts.map((post) => (
+          <Post key={post.id} props={post} />
         ))}
       </section>
     </section>

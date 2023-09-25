@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { RichText } from 'prismic-dom'
 
 import { PostContainer } from './PostContainer'
 import { Button } from './Button'
@@ -9,6 +12,7 @@ import { Title } from './Title'
 import { Content } from './Content'
 import { FooterContainer } from './FooterContainer'
 import { randomUUID } from 'crypto'
+import { createClient } from '@/prismicio'
 
 type Post = {
   props: {
@@ -23,42 +27,58 @@ type Post = {
 }
 
 export async function Posts() {
-  const response = await fetch('http://localhost:3000/post/all', {
+  const prismic = createClient()
+
+  const postsRaw = await prismic.getAllByType('post')
+
+  const posts = postsRaw.map((post) => {
+    return {
+      uid: post.uid,
+      title: post.data.title,
+      cover: post.data.cover,
+      description: post.data.description,
+      content: RichText.asHtml(post.data.content)
+    }
+  })
+
+  console.log(JSON.stringify(posts, null, 2))
+
+  /* const response = await fetch('http://localhost:3000/post/all', {
     next: {
       revalidate: 5,
     },
   })
 
-  const posts: Post[] = await response.json()
+  const posts: Post[] = await response.json() */
 
   return (
     <Container>
       <PostsWrapper>
-        {posts.map(({ props }) => (
+        {posts.map((post) => (
           <PostContainer key={randomUUID()}>
             <Image
-              src={props.imageUrl}
+              src={String(post.cover.url)}
               width={595}
               height={399}
               alt="computer"
             />
             <Title>
-              {props.title?.length > 30
-                ? `${props.title.substring(0, 30)}...`
-                : props?.title}
+              {String(post.title).length > 30
+                ? `${String(post.title).substring(0, 30)}...`
+                : post?.title}
             </Title>
             <Content>
-              {props.content?.length > 200
-                ? `${props.content.substring(0, 200)}...`
-                : props?.content}
+              {post.content?.length > 200
+                ? `${post.content.substring(0, 200)}...`
+                : post?.content}
             </Content>
             <FooterContainer>
-              <span>{props.author}</span>
+              <span>Domingos Henriques</span>
               <span>17 Mar | Leitura: 9min</span>
             </FooterContainer>
 
             <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
-              <Link href={`/blog/post/${props.id}`}>Ler mais</Link>
+              <Link href={`/blog/post/${post.uid}`}>Ler mais</Link>
             </button>
           </PostContainer>
         ))}

@@ -6,24 +6,25 @@ import { PostContainer } from './PostContainer'
 import { Title } from './Title'
 
 type PostProps = {
-  props: {
+  data: {
     title: string
     description: string
     content: string
-  }
+}
 }
 
-export function Post(post: PostProps) {
+export function Post(post: any) {
+  console.log(JSON.stringify(post, null, 2))
   return (
     <Container>
       <Header />
 
       <PostContainer>
-        <Title>{post.props.title}</Title>
+        <Title>{post.data.data.title}</Title>
 
-        <Description>{post.props.description}</Description>
+        <Description>{post.data.data.description}</Description>
 
-        <Content>{post.props.content}</Content>
+        <Content>{post.data.data.content[0].text}</Content>
       </PostContainer>
     </Container>
   )

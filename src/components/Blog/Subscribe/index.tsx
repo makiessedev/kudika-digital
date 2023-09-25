@@ -11,8 +11,8 @@ export function Subscribe() {
 
   async function handleClick(e: FormEvent) {
     e.preventDefault()
-
-    try {
+    console.log(email)
+    /* try {
       await fetch('http://localhost:3000/subscribe', {
         method: 'POST',
         headers: {
@@ -22,7 +22,7 @@ export function Subscribe() {
       })
     } catch (error) {
       console.log(error)
-    }
+    } */
   }
 
   return (
