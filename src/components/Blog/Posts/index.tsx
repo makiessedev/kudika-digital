@@ -55,7 +55,7 @@ export async function Posts() {
     <Container>
       <PostsWrapper>
         {posts.map((post) => (
-          <PostContainer key={randomUUID()}>
+          <PostContainer key={post.uid}>
             <Image
               src={String(post.cover.url)}
               width={595}
