@@ -26,7 +26,14 @@ type PostProps = {
 export async function Posts() {
   const prismic = createClient()
 
-  const postsRaw = await prismic.getAllByType('post')
+  const postsRaw = await prismic.getAllByType('post', {
+    orderings: [
+      {
+        field: 'my.post.date',
+        direction: 'desc'
+      }
+    ]
+  })
 
   const posts: Post[] = postsRaw.map((post) => {
     return {
