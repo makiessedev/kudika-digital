@@ -17,10 +17,17 @@ type PostProps = {
 
 export async function LearningToday() {
   const prismic = createClient()
-  const posts = await prismic.getAllByType('post')
-  const lastThreePosts = posts.slice(-3)
+  const lastThreePosts = await prismic.getAllByType('post', {
+    limit: 3,
+    orderings: [
+      {
+        field: 'my.post.date',
+        direction: 'desc',
+      }
+    ]
+  })
 
-  
+  console.log(lastThreePosts)
 
   return (
     <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
