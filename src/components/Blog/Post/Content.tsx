@@ -1,9 +1,7 @@
 import { ReactNode } from 'react'
 
-export function Content({ children }: { children: ReactNode }) {
+export function Content({content}: {content: any}) {
   return (
-    <p className="text-base font-normal text-gray-500/90 md:text-base">
-      {children}
-    </p>
+    <div dangerouslySetInnerHTML={{ __html: content }} className="text-base font-normal text-gray-500/90 md:text-base" />
   )
 }

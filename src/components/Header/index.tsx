@@ -42,7 +42,7 @@ export default function Header() {
         <Link href="/#services" onClick={closeMenu}>
           Serviços
         </Link>
-        <Link href="#!" onClick={closeMenu}>
+        <Link href="/#bugdet" onClick={closeMenu}>
           Orçamento
         </Link>
         <BlogLink href="/blog" onClick={closeMenu}>

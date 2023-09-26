@@ -1,8 +1,6 @@
-'use client'
-
 import Image from 'next/image'
 import Link from 'next/link'
-import { RichText } from 'prismic-dom'
+import { asText } from '@prismicio/helpers'
 
 import { PostContainer } from './PostContainer'
 import { Button } from './Button'
@@ -11,19 +9,18 @@ import { PostsWrapper } from './PostsWrapper'
 import { Title } from './Title'
 import { Content } from './Content'
 import { FooterContainer } from './FooterContainer'
-import { randomUUID } from 'crypto'
 import { createClient } from '@/prismicio'
 
 type Post = {
-  props: {
-    id: string
-    title: string
-    imageUrl: string
-    description: string
-    content: string
-    author: string
-    authorUrl: string
-  }
+  uid: string
+  title: string
+  coverUrl: string
+  description: string
+  content: string
+}
+
+type PostProps = {
+  props: Post
 }
 
 export async function Posts() {
@@ -31,25 +28,15 @@ export async function Posts() {
 
   const postsRaw = await prismic.getAllByType('post')
 
-  const posts = postsRaw.map((post) => {
+  const posts: Post[] = postsRaw.map((post) => {
     return {
       uid: post.uid,
-      title: post.data.title,
-      cover: post.data.cover,
-      description: post.data.description,
-      content: RichText.asHtml(post.data.content)
+      title: String(post.data.title),
+      coverUrl: String(post.data.cover.url),
+      description: String(post.data.description),
+      content: asText(post.data.content)
     }
   })
-
-  console.log(JSON.stringify(posts, null, 2))
-
-  /* const response = await fetch('http://localhost:3000/post/all', {
-    next: {
-      revalidate: 5,
-    },
-  })
-
-  const posts: Post[] = await response.json() */
 
   return (
     <Container>
@@ -57,10 +44,10 @@ export async function Posts() {
         {posts.map((post) => (
           <PostContainer key={post.uid}>
             <Image
-              src={String(post.cover.url)}
+              src={String(post.coverUrl)}
               width={595}
               height={399}
-              alt="computer"
+              alt="cover"
             />
             <Title>
               {String(post.title).length > 30

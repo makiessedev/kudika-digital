@@ -1,27 +1,33 @@
+import { createClient } from '@/prismicio'
+import { asText } from '@prismicio/helpers'
+
 import { FreeCheck } from '@/components/Blog/FreeCheck'
 import { Posts } from '@/components/Blog/Posts'
 import { Header } from '@/components/Blog/Header'
 import { EmphasisPost } from '@/components/Blog/EmphasisPost'
-import { createClient } from '@/prismicio'
 
-type PostProps = {
-  props: {
-    id: string
-    title: string
-    content: string
-    author: string
-  }
+type Post = {
+  uid: string
+  title: string
+  content: string
+  coverUrl: string
 }
 
 export default async function index() {
   const prismic = createClient()
-  const post = await prismic.getFirst()
+  const postRaw = await prismic.getFirst()
+  const post: Post = {
+    uid: postRaw.uid,
+    title: String(postRaw.data.title),
+    content: asText(postRaw.data.content),
+    coverUrl: String(postRaw.data.cover.url)
+  }
 
   return (
     <>
       <section className="flex flex-col items-center gap-8 px-6 pt-40 lg:px-20">
         <Header />
-        <EmphasisPost props={post} />
+        <EmphasisPost data={post} />
       </section>
       <FreeCheck />
       <Posts />

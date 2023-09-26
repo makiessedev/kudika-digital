@@ -1,5 +1,7 @@
-import { Post } from '@/components/Blog/Post'
 import { createClient } from '@/prismicio'
+import { asHTML } from '@prismicio/helpers'
+
+import { Post } from '@/components/Blog/Post'
 
 type Slug = {
   params: {
@@ -7,17 +9,14 @@ type Slug = {
   }
 }
 
-type PostProps = {
-  data: {
-    title: string
-    description: string
-    content: string
-  }
-}
-
 export default async function index({ params }: Slug) {
   const prismic = createClient()
-  const post: any = await prismic.getByUID('post', params.id)
+  const postRaw = await prismic.getByUID('post', params.id)
+  const post = {
+    title: String(postRaw.data.title),
+    description: String(postRaw.data.description),
+    content: asHTML(postRaw.data.content)
+  }
 
   return <Post data={post} />
 }

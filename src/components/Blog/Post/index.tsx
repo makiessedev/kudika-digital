@@ -1,3 +1,4 @@
+import { data } from 'autoprefixer'
 import { Container } from './Container'
 import { Content } from './Content'
 import { Description } from './Description'
@@ -5,25 +6,27 @@ import { Header } from './Header'
 import { PostContainer } from './PostContainer'
 import { Title } from './Title'
 
-type PostProps = {
-  data: {
-    title: string
-    description: string
-    content: string
-}
+type Post = {
+  title: string,
+  description: string,
+  content: string
 }
 
-export function Post(post: any) {
+type PostProps = {
+  data: Post
+}
+
+export function Post({data}: PostProps) {
   return (
     <Container>
       <Header />
 
       <PostContainer>
-        <Title>{post.data.data.title}</Title>
+        <Title>{data.title}</Title>
 
-        <Description>{post.data.data.description}</Description>
+        <Description>{data.description}</Description>
 
-        <Content>{post.data.data.content[0].text}</Content>
+        <Content content={data.content} />
       </PostContainer>
     </Container>
   )
