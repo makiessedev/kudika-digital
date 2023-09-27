@@ -5,24 +5,15 @@ import { Title } from './Title'
 import { Paragraph } from './Paragraph'
 import { Button } from './Button'
 import { FormEvent, useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 export function Subscribe() {
   const [email, setEmail] = useState<string>()
+  const router = useRouter()
 
   async function handleClick(e: FormEvent) {
     e.preventDefault()
-    console.log(email)
-    /* try {
-      await fetch('http://localhost:3000/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      })
-    } catch (error) {
-      console.log(error)
-    } */
+    router.push('https://makiesse.systeme.io/makiesse')
   }
 
   return (
@@ -37,14 +28,8 @@ export function Subscribe() {
           email
         </Paragraph>
         <form className="flex flex-col items-center justify-center gap-4">
-          <input
-            className="h-12 w-72 rounded-full border-2 border-white bg-red-500 p-5 text-white outline-none placeholder:text-white/50 md:h-12 md:w-72"
-            type="email"
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="seu@email.com"
-          />
-          <Button type="submit" onClick={handleClick}>
-            Enviar
+          <Button type="button" onClick={handleClick}>
+            Subscrever
           </Button>
         </form>
       </div>
