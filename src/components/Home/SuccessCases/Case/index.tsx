@@ -27,11 +27,18 @@ export function Case({
       <div className="flex flex-col items-center justify-center space-y-3 pt-3 md:items-start md:space-y-3">
         <Title>{title}</Title>
         <StrongText>{strongText}</StrongText>
+        <Image
+          className="md:hidden"
+          src={imgSrc}
+          width={553}
+          height={365}
+          alt="girl"
+        />
         <Text>{text}</Text>
         <Button href={link}>conheça este case</Button>
       </div>
       <Image
-        className="hidden lg:block"
+        className="hidden md:block"
         src={imgSrc}
         width={553}
         height={365}

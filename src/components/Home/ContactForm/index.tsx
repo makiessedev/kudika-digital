@@ -18,7 +18,7 @@ export function ContactForm() {
           <select
             name=""
             id=""
-            className="w-[350px] rounded-lg border-2 border-white bg-red-500 font-black text-gray-100"
+            className="w-[300px] rounded-lg border-2 border-white bg-red-500 font-black text-gray-100"
           >
             <option className="max-w-full bg-white uppercase text-gray-500">
               Área de atuação da sua empresa
