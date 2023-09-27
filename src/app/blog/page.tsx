@@ -1,10 +1,11 @@
 import { createClient } from '@/prismicio'
-import { asText, asLink, asDate } from '@prismicio/helpers'
+import { asText, asLink } from '@prismicio/helpers'
 
 import { FreeCheck } from '@/components/Blog/FreeCheck'
 import { Posts } from '@/components/Blog/Posts'
 import { Header } from '@/components/Blog/Header'
 import { EmphasisPost } from '@/components/Blog/EmphasisPost'
+import { readingRate } from '@/Helpers/ReadingRate'
 
 type Post = {
   uid: string
@@ -14,6 +15,7 @@ type Post = {
   author: string
   authorUrl: string | null
   updatedAt: string
+  readingRateInMinuts: number
 }
 
 export default async function index() {
@@ -23,6 +25,7 @@ export default async function index() {
     uid: postRaw.uid,
     title: String(postRaw.data.title),
     content: asText(postRaw.data.content),
+    readingRateInMinuts: readingRate(asText(postRaw.data.content)),
     coverUrl: String(postRaw.data.cover.url),
     author: String(postRaw.data.author),
     authorUrl: asLink(postRaw.data.authorurl),

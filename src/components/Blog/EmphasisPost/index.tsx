@@ -10,6 +10,7 @@ type Post = {
   author: string
   authorUrl: string | null
   updatedAt: string
+  readingRateInMinuts: number
 }
 
 type PostProps = {
@@ -39,7 +40,7 @@ export function EmphasisPost({data}: PostProps) {
         <div className="flex justify-between text-sm font-normal text-gray-500/50 md:text-base">
           <span>{data.author}</span>|
           <span>{data.updatedAt}</span>|
-          <span>Leitura: 9min</span>
+          <span>Leitura: {data.readingRateInMinuts} min</span>
         </div>
 
         <button className="rounded-3xl border border-gray-500/50 bg-white px-7 py-[5px] text-gray-500/50">

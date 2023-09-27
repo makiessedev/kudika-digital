@@ -10,6 +10,7 @@ import { Title } from './Title'
 import { Content } from './Content'
 import { FooterContainer } from './FooterContainer'
 import { createClient } from '@/prismicio'
+import { readingRate } from '@/Helpers/ReadingRate'
 
 type Post = {
   uid: string
@@ -20,6 +21,7 @@ type Post = {
   author: string
   authorUrl: string | null
   updatedAt: string
+  readingRateInMinuts: number
 }
 
 type PostProps = {
@@ -45,6 +47,7 @@ export async function Posts() {
       coverUrl: String(post.data.cover.url),
       description: String(post.data.description),
       content: asText(post.data.content),
+      readingRateInMinuts: readingRate(asText(post.data.content)),
       author: String(post.data.author),
       authorUrl: asLink(post.data.authorurl),
       updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt', {
@@ -79,7 +82,7 @@ export async function Posts() {
             <FooterContainer>
               <span>{post.author}</span>|
               <span>{post.updatedAt}</span>|
-              <span>Leitura: 9min</span>
+              <span>Leitura: {post.readingRateInMinuts} min</span>
             </FooterContainer>
 
             <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
