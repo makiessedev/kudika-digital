@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { asText } from '@prismicio/helpers'
+import { asLink, asText } from '@prismicio/helpers'
 
 import { PostContainer } from './PostContainer'
 import { Button } from './Button'
@@ -17,6 +17,9 @@ type Post = {
   coverUrl: string
   description: string
   content: string
+  author: string
+  authorUrl: string | null
+  updatedAt: string
 }
 
 type PostProps = {
@@ -41,7 +44,14 @@ export async function Posts() {
       title: String(post.data.title),
       coverUrl: String(post.data.cover.url),
       description: String(post.data.description),
-      content: asText(post.data.content)
+      content: asText(post.data.content),
+      author: String(post.data.author),
+      authorUrl: asLink(post.data.authorurl),
+      updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt', {
+        day: '2-digit',
+        month: 'short',
+        year: '2-digit'
+      })
     }
   })
 
@@ -67,8 +77,9 @@ export async function Posts() {
                 : post?.content}
             </Content>
             <FooterContainer>
-              <span>Domingos Henriques</span>
-              <span>17 Mar | Leitura: 9min</span>
+              <span>{post.author}</span>|
+              <span>{post.updatedAt}</span>|
+              <span>Leitura: 9min</span>
             </FooterContainer>
 
             <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">

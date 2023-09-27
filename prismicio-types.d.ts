@@ -31,6 +31,17 @@ interface PostDocumentData {
   date: prismic.DateField;
 
   /**
+   * author field in *post*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: post.author
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  author: prismic.KeyTextField;
+
+  /**
    * authorurl field in *post*
    *
    * - **Field Type**: Link

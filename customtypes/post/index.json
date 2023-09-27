@@ -5,7 +5,7 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": { 
+    "Main": {
       "uid": {
         "config": {
           "label": "UID"
@@ -23,6 +23,13 @@
         "type": "Date",
         "config": {
           "label": "date",
+          "placeholder": ""
+        }
+      },
+      "author": {
+        "type": "Text",
+        "config": {
+          "label": "author",
           "placeholder": ""
         }
       },

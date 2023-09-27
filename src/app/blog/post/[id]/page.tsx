@@ -1,5 +1,5 @@
 import { createClient } from '@/prismicio'
-import { asHTML } from '@prismicio/helpers'
+import { asHTML, asLink } from '@prismicio/helpers'
 
 import { Post } from '@/components/Blog/Post'
 
@@ -15,7 +15,9 @@ export default async function index({ params }: Slug) {
   const post = {
     title: String(postRaw.data.title),
     description: String(postRaw.data.description),
-    content: asHTML(postRaw.data.content)
+    content: asHTML(postRaw.data.content),
+    author: String(postRaw.data.author),
+    authorUrl: asLink(postRaw.data.authorurl)
   }
 
   return <Post data={post} />

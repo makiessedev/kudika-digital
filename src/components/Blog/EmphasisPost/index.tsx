@@ -7,6 +7,8 @@ type Post = {
   title: string
   content: string
   coverUrl: string
+  author: string
+  authorUrl: string | null
 }
 
 type PostProps = {
@@ -20,7 +22,7 @@ export function EmphasisPost({data}: PostProps) {
         src={data.coverUrl}
         width={595}
         height={399}
-        alt="computer"
+        alt="cover image"
       />
       <div className="space-y-4">
         <Link href={`/blog/post/${data.uid}`}>
@@ -34,7 +36,7 @@ export function EmphasisPost({data}: PostProps) {
             : data.content}
         </p>
         <div className="flex justify-between text-sm font-normal text-gray-500/50 md:text-base">
-          <span>Domingos Henriques</span>
+          <span>{data.author}</span>
           <span>17 Mar | Leitura: 9min</span>
         </div>
 
