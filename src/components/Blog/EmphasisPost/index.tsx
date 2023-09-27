@@ -16,6 +16,7 @@ type Post = {
 type PostProps = {
   data: Post
 }
+
 export function EmphasisPost({data}: PostProps) {
   return (
     <Container>
