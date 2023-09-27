@@ -1,5 +1,5 @@
 import { createClient } from '@/prismicio'
-import { asText, asLink } from '@prismicio/helpers'
+import { asText, asLink, asDate } from '@prismicio/helpers'
 
 import { FreeCheck } from '@/components/Blog/FreeCheck'
 import { Posts } from '@/components/Blog/Posts'
@@ -13,6 +13,7 @@ type Post = {
   coverUrl: string
   author: string
   authorUrl: string | null
+  updatedAt: string
 }
 
 export default async function index() {
@@ -24,7 +25,12 @@ export default async function index() {
     content: asText(postRaw.data.content),
     coverUrl: String(postRaw.data.cover.url),
     author: String(postRaw.data.author),
-    authorUrl: asLink(postRaw.data.authorurl)
+    authorUrl: asLink(postRaw.data.authorurl),
+    updatedAt: new Date(postRaw.last_publication_date).toLocaleDateString('pt', {
+      day: '2-digit',
+      month: 'short',
+      year: '2-digit'
+    })
   }
 
   return (
