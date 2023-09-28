@@ -4,7 +4,7 @@ import Image from 'next/image'
 export function Container({ children }: { children: ReactNode }) {
   return (
     <div className="relative">
-      <section className="flex items-center justify-center bg-red-500 px-6 md:py-8 lg:px-20">
+      <section className="bg-[url('/background/stars-bg-red.png')] flex items-center justify-center bg-red-500 px-6 md:py-8 lg:px-20">
         <Image
           className="absolute -top-[1px] left-0 right-0 block w-full"
           src="/background/bottom-white-wave.png"

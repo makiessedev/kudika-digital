@@ -79,9 +79,9 @@ export async function LearningToday() {
                 : post?.content}
             </Content>
             <FooterContainer>
-              <span>{post.author}</span>|
-              <span>{post.updatedAt}</span>|
-              <span>Leitura: {post.readingRateInMinuts} min</span>
+              <span className='text-xs text-gray-500 font-medium'>{post.author}</span>|
+              <span className='text-xs text-gray-500 font-medium'>{post.updatedAt}</span>|
+              <span className='text-xs text-gray-500 font-medium'>Leitura: {post.readingRateInMinuts} min</span>
             </FooterContainer>
 
             <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">

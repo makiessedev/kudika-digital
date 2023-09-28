@@ -24,7 +24,7 @@ export function Case({
 }: SuccessCaseProps) {
   return (
     <Container imagePosition={imagePosition}>
-      <div className="flex flex-col items-center justify-center space-y-3 pt-3 md:items-start md:space-y-3">
+      <div className="flex flex-col items-center justify-center space-y-1 md:items-start md:space-y-3">
         <Title>{title}</Title>
         <StrongText>{strongText}</StrongText>
         <Image
