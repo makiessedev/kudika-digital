@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import { asLink, asText } from '@prismicio/helpers'
@@ -11,12 +13,12 @@ import { Content } from './Content'
 import { FooterContainer } from './FooterContainer'
 import { createClient } from '@/prismicio'
 import { readingRate } from '@/Helpers/ReadingRate'
+import { useState } from 'react'
 
 type Post = {
   uid: string
   title: string
   coverUrl: string
-  description: string
   content: string
   author: string
   authorUrl: string | null
@@ -25,43 +27,19 @@ type Post = {
 }
 
 type PostProps = {
-  props: Post
+  posts: Post[]
 }
 
-export async function Posts() {
-  const prismic = createClient()
-
-  const postsRaw = await prismic.getAllByType('post', {
-    orderings: [
-      {
-        field: 'my.post.date',
-        direction: 'desc'
-      }
-    ]
-  })
-
-  const posts: Post[] = postsRaw.map((post) => {
-    return {
-      uid: post.uid,
-      title: String(post.data.title),
-      coverUrl: String(post.data.cover.url),
-      description: String(post.data.description),
-      content: asText(post.data.content),
-      readingRateInMinuts: readingRate(asText(post.data.content)),
-      author: String(post.data.author),
-      authorUrl: asLink(post.data.authorurl),
-      updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt', {
-        day: '2-digit',
-        month: 'short',
-        year: '2-digit'
-      })
-    }
-  })
+export function Posts({posts}: PostProps) {
+  const [postsToShow, setPostsToShow] = useState(6)
+  const handleLoadMore = () => {
+    setPostsToShow(postsToShow + 6);
+  };
 
   return (
     <Container>
       <PostsWrapper>
-        {posts.map((post) => (
+        {posts.slice(0, postsToShow).map((post) => (
           <PostContainer key={post.uid}>
             <Image
               src={String(post.coverUrl)}
@@ -91,7 +69,7 @@ export async function Posts() {
           </PostContainer>
         ))}
       </PostsWrapper>
-      <Button>ver mais</Button>
+      { postsToShow < posts.length && <Button onClick={handleLoadMore}>ver mais</Button> }
     </Container>
   )
 }

@@ -11,6 +11,7 @@ type Post = {
   uid: string
   title: string
   content: string
+  description?: string
   coverUrl: string
   author: string
   authorUrl: string | null
@@ -20,30 +21,58 @@ type Post = {
 
 export default async function index() {
   const prismic = createClient()
-  const postRaw = await prismic.getFirst()
-  const post: Post = {
-    uid: postRaw.uid,
-    title: String(postRaw.data.title),
-    content: asText(postRaw.data.content),
-    readingRateInMinuts: readingRate(asText(postRaw.data.content)),
-    coverUrl: String(postRaw.data.cover.url),
-    author: String(postRaw.data.author),
-    authorUrl: asLink(postRaw.data.authorurl),
-    updatedAt: new Date(postRaw.last_publication_date).toLocaleDateString('pt', {
+
+  const emphasisPostRaw = await prismic.getFirst()
+  const emphasisPost: Post = {
+    uid: emphasisPostRaw.uid,
+    title: String(emphasisPostRaw.data.title),
+    content: asText(emphasisPostRaw.data.content),
+    readingRateInMinuts: readingRate(asText(emphasisPostRaw.data.content)),
+    coverUrl: String(emphasisPostRaw.data.cover.url),
+    author: String(emphasisPostRaw.data.author),
+    authorUrl: asLink(emphasisPostRaw.data.authorurl),
+    updatedAt: new Date(emphasisPostRaw.last_publication_date).toLocaleDateString('pt', {
       day: '2-digit',
       month: 'short',
       year: '2-digit'
     })
   }
 
+  const allPostsRaw = await prismic.getAllByType('post', {
+    orderings: [
+      {
+        field: 'my.post.date',
+        direction: 'desc'
+      }
+    ]
+  })
+
+  const allPosts: Post[] = allPostsRaw.map((post) => {
+    return {
+      uid: post.uid,
+      title: String(post.data.title),
+      coverUrl: String(post.data.cover.url),
+      description: String(post.data.description),
+      content: asText(post.data.content),
+      readingRateInMinuts: readingRate(asText(post.data.content)),
+      author: String(post.data.author),
+      authorUrl: asLink(post.data.authorurl),
+      updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt', {
+        day: '2-digit',
+        month: 'short',
+        year: '2-digit'
+      })
+    }
+  })
+
   return (
     <>
       <section className="flex flex-col items-center gap-8 px-6 pt-40 lg:px-20">
         <Header />
-        <EmphasisPost data={post} />
+        <EmphasisPost data={emphasisPost} />
       </section>
       <FreeCheck />
-      <Posts />
+      <Posts posts={allPosts} />
     </>
   )
 }
