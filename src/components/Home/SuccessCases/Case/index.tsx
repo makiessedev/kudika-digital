@@ -24,11 +24,11 @@ export function Case({
 }: SuccessCaseProps) {
   return (
     <Container imagePosition={imagePosition}>
-      <div className="flex flex-col items-center justify-center space-y-1 md:items-start md:space-y-3">
+      <div className="flex flex-col items-center justify-center space-y-1 lg:items-start md:space-y-3">
         <Title>{title}</Title>
         <StrongText>{strongText}</StrongText>
         <Image
-          className="md:hidden"
+          className="lg:hidden"
           src={imgSrc}
           width={553}
           height={365}
@@ -38,7 +38,7 @@ export function Case({
         <Button href={link}>conheça este case</Button>
       </div>
       <Image
-        className="hidden md:block"
+        className="hidden lg:block"
         src={imgSrc}
         width={553}
         height={365}
