@@ -40,16 +40,16 @@ export default function Header() {
           pathname !== '/' ? 
             <>
               <Link href="/#cases" onClick={closeMenu}>
-                Home
+                Cases
               </Link>
               <Link href="/#solutions" onClick={closeMenu}>
-              Solução
+                Solução
               </Link>
               <Link href="/#services" onClick={closeMenu}>
-              Serviços
+                Serviços
               </Link>
               <Link href="/#bugdet" onClick={closeMenu}>
-              Orçamento
+                Orçamento
               </Link>
             </> : 
             <>
