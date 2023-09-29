@@ -14,7 +14,7 @@ export function ContactForm() {
         className="mt-10 flex flex-col items-center gap-6 md:gap-8"
       >
         <div className="grid gap-3 md:grid-cols-2">
-          <input type="hidden" name='_next' value='http://localhost:3000/#bugdet' />
+          <input type="hidden" name='_next' value={ process.env.NODE_ENV === 'production' ? 'https://kudika-digital.vercel.app/' : 'http://localhost:3000/#bugdet' } />
           <input type="hidden" name='_captcha' value='false' />
           <input 
             type="hidden" 
