@@ -11,10 +11,12 @@ import { LinksContainer } from './LinksContainer'
 import { KudikaLogo } from './KudikaLogo'
 import { BlogLink } from './BlogLink'
 import { SmoothScrollLink } from './SmoothScrollLink'
+import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [activeMobileMenu, setActiveMobileMenu] = useState<boolean>(false)
   const isMobile = useMedia('(max-width: 767px)')
+  const pathname = usePathname()
 
   function closeMenu() {
     setTimeout(() => {
@@ -34,10 +36,30 @@ export default function Header() {
         <Link href="/" onClick={closeMenu}>
           Home
         </Link>
-        <SmoothScrollLink text='Cases' targetId='cases'  offset={ isMobile ? 55 : 90} setActiveMobileMenu={setActiveMobileMenu} />
-        <SmoothScrollLink text='Solução' targetId='solutions' offset={isMobile ? 75 : 80} setActiveMobileMenu={setActiveMobileMenu} />
-        <SmoothScrollLink text='Serviços' targetId='services' offset={isMobile ? 80 : 90} setActiveMobileMenu={setActiveMobileMenu} />
-        <SmoothScrollLink text='Orçamento' targetId='bugdet' setActiveMobileMenu={setActiveMobileMenu} />
+        {
+          pathname !== '/' ? 
+            <>
+              <Link href="/#cases" onClick={closeMenu}>
+                Home
+              </Link>
+              <Link href="/#solutions" onClick={closeMenu}>
+              Solução
+              </Link>
+              <Link href="/#services" onClick={closeMenu}>
+              Serviços
+              </Link>
+              <Link href="/#bugdet" onClick={closeMenu}>
+              Orçamento
+              </Link>
+            </> : 
+            <>
+              <SmoothScrollLink text='Cases' targetId='cases'  offset={ isMobile ? 55 : 90} setActiveMobileMenu={setActiveMobileMenu} />
+              <SmoothScrollLink text='Solução' targetId='solutions' offset={isMobile ? 75 : 80} setActiveMobileMenu={setActiveMobileMenu} />
+              <SmoothScrollLink text='Serviços' targetId='services' offset={isMobile ? 80 : 90} setActiveMobileMenu={setActiveMobileMenu} />
+              <SmoothScrollLink text='Orçamento' targetId='bugdet' setActiveMobileMenu={setActiveMobileMenu} />
+            </>
+        }
+        
         <BlogLink href="/blog" onClick={closeMenu}>
           Blog
         </BlogLink>
