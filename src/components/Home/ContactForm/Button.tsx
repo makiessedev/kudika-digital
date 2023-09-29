@@ -1,8 +1,12 @@
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes, ReactNode } from 'react'
 
-export function Button({ children }: { children: ReactNode }) {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  children: ReactNode
+}
+
+export function Button({ children, ...props }: ButtonProps) {
   return (
-    <button className="mx-auto h-12 w-[300px] rounded-lg bg-gray-500 font-semibold uppercase text-gray-100">
+    <button {...props} className="mx-auto h-12 w-[300px] rounded-lg bg-gray-500 font-semibold uppercase text-gray-100">
       {children}
     </button>
   )
