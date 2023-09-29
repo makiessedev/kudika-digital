@@ -4,10 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-.grid-reverse {
-  direction: rtl;
-}
-
 html, body{
   @apply max-w-[100vw] overflow-x-hidden
 } 
+
+.grid-reverse {
+  direction: rtl;
+}

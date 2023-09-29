@@ -9,7 +9,7 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 export function Button({ children, href, ...props }: ButtonProps) {
   return (
     <Link
-      className="flex items-center justify-center rounded-full bg-red-500 px-8 py-2 text-[0.88rem] font-bold uppercase text-white"
+      className="hover:brightness-90 focus:brightness-90 flex items-center justify-center rounded-full bg-red-500 px-8 py-2 text-[0.88rem] font-bold uppercase text-white"
       href={href}
       {...props}
     >

@@ -60,14 +60,14 @@ export function SolutionOnDesktop() {
       <div className="mt-10 flex justify-center gap-3">
         <button
           onClick={decrementSlideNumber}
-          className="flex h-10 w-14 items-center justify-center bg-red-500 text-gray-100"
+          className="hover:brightness-90 focus:brightness-90 rounded flex h-10 w-14 items-center justify-center bg-red-500 text-gray-100"
         >
           <ChevronLeft />
         </button>
 
         <button
           onClick={incrementSlideNumber}
-          className="flex h-10 w-14 items-center justify-center bg-red-500 text-gray-100"
+          className="hover:brightness-90 focus:brightness-90 rounded flex h-10 w-14 items-center justify-center bg-red-500 text-gray-100"
         >
           <ChevronRight />
         </button>
