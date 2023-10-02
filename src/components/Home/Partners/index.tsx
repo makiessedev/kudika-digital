@@ -9,7 +9,7 @@ export function Partners() {
     <section className="gap-6 space-y-10 px-6 py-12 md:flex md:flex-col md:items-center md:justify-center">
       <section className="flex flex-col items-center justify-center">
         <Title>Parceiros</Title>
-        <div className="flex flex-wrap items-center justify-center gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
           {data.map(({ image, link, title }) => (
             <SectionPartners
               key={randomUUID()}
@@ -21,7 +21,7 @@ export function Partners() {
         </div>
       </section>
       <section className="flex flex-col items-center">
-        <Title>Produtos</Title>
+        <Title>Produto</Title>
         <SectionProdcts />
       </section>
     </section>

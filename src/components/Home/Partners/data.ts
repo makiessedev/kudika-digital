@@ -34,4 +34,9 @@ export const data = [
     image: '/partners/ajo.jpeg',
     link: 'https://www.facebook.com/profile.php?id=100084449657706',
   },
+  {
+    title: 'IMS',
+    image: '/partners/ims.png',
+    link: 'https://www.inefor.ao/',
+  },
 ]
