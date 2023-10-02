@@ -23,7 +23,7 @@ export function AllServices() {
             <Image src={imgSrc} alt="icon" width={60} height={60} />
             <Subtitle>{title}</Subtitle>
 
-            <ul>
+            <ul className='space-y-1'>
               {descriptions.map((value) => (
                 <ListItem key={randomUUID()}>{value}</ListItem>
               ))}
