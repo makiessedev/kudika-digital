@@ -45,7 +45,7 @@ npm install
 
 ## Screenshots
 
-> Uma demonstração deste aplicativo pode ser encontrada em https://kudikadigital.vercel.app/
+> Uma demonstração deste aplicativo pode ser encontrada em https://kudika-digital.vercel.app/
 
 
 
