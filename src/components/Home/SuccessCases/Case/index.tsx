@@ -39,7 +39,7 @@ export function Case({
           ref={ref}
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 1, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
         >
           <Image
             className="lg:hidden"
@@ -57,7 +57,7 @@ export function Case({
         ref={ref}
         initial={{ opacity: 0, x: 20 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
       >
         <Image
           className="hidden lg:block"
@@ -72,7 +72,7 @@ export function Case({
         ref={ref}
         initial={{ opacity: 0, x: -20 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
-        transition={{ duration: 0.5, delay: 0.3 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
       >
         <Image
           className="hidden lg:block"

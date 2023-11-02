@@ -1,3 +1,8 @@
+'use client'
+
+import { inView, motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+
 import { Input } from './Input'
 import { Title } from './Title'
 import { Button } from './Button'
@@ -5,9 +10,18 @@ import { Option } from './Option'
 import { Container } from './Container'
 
 export function ContactForm() {
+  const [ref, inView] = useInView({});
+
   return (
     <Container>
-      <Title>fale com o nosso especialista</Title>
+      <motion.div
+        ref={ref}
+        initial={{ opacity: 0, y: 20 }}
+        animate={inView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 1, delay: 0.2 }}
+      >
+        <Title>fale com o nosso especialista</Title>
+      </motion.div>
       <form 
         action='https://formsubmit.co/makiesse.dev@gmail.com' 
         method='POST' 
@@ -22,10 +36,10 @@ export function ContactForm() {
             value='Recebemos a sua mensagem, entraremos em contacto!' 
           />
 
-          <Input type="text" name='name' placeholder="Digite seu nome" />
-          <Input type="email" name='email' placeholder="Digite seu email" />
-          <Input type="text" name='number' placeholder="Digite seu número de telefone" />
-          <Input type="text" name='company' placeholder="Digite o nome da sua empresa" />
+          <Input type="text" name='name' required placeholder="Digite seu nome" />
+          <Input type="email" name='email' required placeholder="Digite seu email" />
+          <Input type="text" name='number' required placeholder="Digite seu número de telefone" />
+          <Input type="text" name='company' required placeholder="Digite o nome da sua empresa" />
 
           <select
             name="segment"
@@ -54,11 +68,12 @@ export function ContactForm() {
             <Option value='Outros'>Outros</Option>
           </select>
 
-          <Input type="text" placeholder="Assunto" />
+          <Input type="text" required placeholder="Assunto" />
         </div>
         <textarea 
           className='mx-auto md:h-[100px] w-[300px] rounded-lg border-2 border-white bg-red-500 font-semibold text-white placeholder:text-white/60 md:w-full'
           name="message" 
+          required
           cols={30} 
           rows={3}
           placeholder='Escreva sua mensagem'

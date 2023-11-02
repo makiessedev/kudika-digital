@@ -21,13 +21,13 @@ export default function Index() {
         className="hidden h-[666px] w-[365px] items-center md:flex"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 1, delay: 0.5 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
           className="hidden h-[446px] w-[365px] md:block"
           src={Boy}
           height={650}
-          alt="girl"
+          alt="boy"
         />
       </motion.div>
       
@@ -36,7 +36,7 @@ export default function Index() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 1, delay: 0.5 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className='space-y-4 md:space-y-6'
           >
             <Title>Humanizando Marcas</Title>

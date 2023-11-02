@@ -1,7 +1,8 @@
 import Image from 'next/image'
-import { Paragraph } from './Paragraph'
 import Link from 'next/link'
+
 import { createClient } from '@/prismicio'
+import { Paragraph } from './Paragraph'
 import { PostsWrapper } from '@/components/Blog/Posts/PostsWrapper'
 import { PostContainer } from '@/components/Blog/Posts/PostContainer'
 import { FooterContainer } from '@/components/Blog/Posts/FooterContainer'
@@ -9,6 +10,7 @@ import { asLink, asText } from '@prismicio/helpers'
 import { readingRate } from '@/Helpers/ReadingRate'
 import { Content } from '@/components/Blog/Posts/Content'
 import { Title } from '@/components/Blog/Posts/Title'
+import { Title as PrimitiveTitle } from './Title'
 
 type PostProps = {
   props: {
@@ -53,9 +55,7 @@ export async function LearningToday() {
   return (
     <section className="mb-6 mt-8 space-y-4 px-6 py-10 lg:px-20">
       <div className="flex flex-col items-center gap-4">
-        <h2 className="text-center font-montserrat text-3xl font-black uppercase text-red-500 md:text-left md:text-5xl xl:text-6xl">
-          aprendizado de hoje
-        </h2>
+        <PrimitiveTitle />
         <Paragraph>Veja os últimos textos da equipe kudika digital</Paragraph>
       </div>
       <PostsWrapper>

@@ -23,7 +23,7 @@ export default function Index() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <Title>Casos de sucesso</Title>
+            <Title>SE PRECISAR</Title>
           </motion.div>
         </div>
 
