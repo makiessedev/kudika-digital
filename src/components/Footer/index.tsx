@@ -1,13 +1,16 @@
 /* eslint-disable no-irregular-whitespace */
 'use client'
+
 import React from 'react'
-import { KudikaLogo } from './KudikaLogo'
 import Image from 'next/image'
+import Link from 'next/link'
+import ScrollToTop from 'react-scroll-to-top'
+
+import { KudikaLogo } from './KudikaLogo'
 import { Container } from './Container'
 import { CopyrightWrapper } from './CopyrightWrapper'
 import { SiteMapWrapper } from './SiteMapWrapper'
 import { SocialMidiaWrapper } from './SocialMidiaWrapper'
-import ScrollToTop from 'react-scroll-to-top'
 
 export default function Footer() {
   return (
@@ -85,36 +88,66 @@ export default function Footer() {
               </h5>
 
               <SocialMidiaWrapper>
-                <Image
-                  src="/icons/facebook.png"
-                  alt="facebook icon"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/icons/instagram.png"
-                  alt="instagram icon"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/icons/linkedin.png"
-                  alt="linkedin icon"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/icons/whatsapp.png"
-                  alt="whatsapp icon"
-                  width={30}
-                  height={30}
-                />
-                <Image
-                  src="/icons/youtube.png"
-                  alt="youtube icon"
-                  width={30}
-                  height={30}
-                />
+                <Link 
+                  href='https://www.facebook.com/kudikadigital'
+                  target='_blank'
+                >
+                  <Image
+                    src="/icons/facebook.png"
+                    alt="facebook icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+
+                <Link 
+                  href='https://www.instagram.com/kudikadigital/'
+                  target='_blank'
+                >
+                  <Image
+                    src="/icons/instagram.png"
+                    alt="instagram icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+
+                <Link 
+                  href='https://www.linkedin.com/company/kudikadigital/mycompany/'
+                  target='_blank'
+                >
+                  <Image
+                    src="/icons/linkedin.png"
+                    alt="linkedin icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+
+                <Link 
+                  href='https://wa.link/al8xry'
+                  target='_blank'
+                >
+                  <Image
+                    src="/icons/whatsapp.png"
+                    alt="whatsapp icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+
+                <Link 
+                  href='https://www.youtube.com/@bminds7865'
+                  target='_blank'
+                >
+                  <Image
+                    src="/icons/youtube.png"
+                    alt="youtube icon"
+                    width={30}
+                    height={30}
+                  />
+                </Link>
+
               </SocialMidiaWrapper>
             </div>
           </div>

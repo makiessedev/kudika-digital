@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import Image from 'next/image'
+
 import { Container } from './Container'
+import { Button } from '../Posts/Button'
 
 type Post = {
   uid: string
@@ -44,7 +46,7 @@ export function EmphasisPost({data}: PostProps) {
           <span className='text-xs text-gray-500 font-medium'>Leitura: {data.readingRateInMinuts} min</span>
         </div>
 
-        <button className="rounded-3xl border border-gray-500/50 bg-white px-7 py-[5px] text-gray-500/50">
+        <button className="rounded-3xl border hover:translate-x-1 hover:transition-transform border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
           <Link href={`/blog/post/${data.uid}`}>Ler mais</Link>
         </button>
       </div>

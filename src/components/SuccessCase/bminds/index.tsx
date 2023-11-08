@@ -10,6 +10,7 @@ export function Bminds() {
     'O BMinds é um case de sucesso excepcional, onde nós Kudika Digita tivemos um papel fundamental em seu lançamento bem-sucedido.',
     'Com foco em estratégia, UI/UX, design visual (IDV), mídia social e website, trabalhamos para criar uma experiência única e impactante para os participantes.',
   ]
+  
   return (
     <>
       <section className="mt-10 space-y-6 overflow-hidden md:space-y-20">

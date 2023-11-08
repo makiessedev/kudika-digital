@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { asLink, asText } from '@prismicio/helpers'
 
 import { PostContainer } from './PostContainer'
 import { Button } from './Button'
@@ -11,8 +10,6 @@ import { PostsWrapper } from './PostsWrapper'
 import { Title } from './Title'
 import { Content } from './Content'
 import { FooterContainer } from './FooterContainer'
-import { createClient } from '@/prismicio'
-import { readingRate } from '@/Helpers/ReadingRate'
 import { useState } from 'react'
 
 type Post = {
@@ -63,7 +60,7 @@ export function Posts({posts}: PostProps) {
               <span className='text-xs text-gray-500 font-medium'>Leitura: {post.readingRateInMinuts} min</span>
             </FooterContainer>
 
-            <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
+            <button className="rounded-3xl border hover:translate-x-1 hover:transition-transform border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
               <Link href={`/blog/post/${post.uid}`}>Ler mais</Link>
             </button>
           </PostContainer>

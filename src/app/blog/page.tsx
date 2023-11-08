@@ -68,7 +68,10 @@ export default async function index() {
   return (
     <>
       <section className="flex flex-col items-center gap-8 px-6 pt-40 lg:px-20">
-        <Header />
+        <Header 
+          title='BLOG' 
+          text='Fique ligado aos nossos artigos'
+        />
         <EmphasisPost data={emphasisPost} />
       </section>
       <FreeCheck />

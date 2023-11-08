@@ -5,13 +5,19 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
+import { Typewriter } from '@/Helpers/Typewriter'
 import { Container } from './Container'
 import { Title } from './Title'
 import { Paragraph } from './Paragraph'
 import { Button } from './Button'
+import { useRef } from 'react'
 
 export default function Index() {
   const [ref, inView] = useInView({});
+  const titleRef = useRef()
+
+  const title = 'Marketing e Publicidade'
+  let titleIndex = 0
 
   return (
     <>
@@ -23,7 +29,9 @@ export default function Index() {
             animate={inView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-          <Title>Marketing e Publicidade</Title>
+          <Title>
+            <Typewriter text='Marketing e Publicidade' speed={200} />
+          </Title>
           <Paragraph>
             <span className="font-bold">
               Transforme sua marca em um sucesso online{' '}
@@ -40,7 +48,7 @@ export default function Index() {
             className='space-y-4 md:space-y-6'
           >
             <Image
-              className="mx-auto w-96 md:w-[550px]"
+              className="mx-auto w-96 md:w-[550px] animate-float"
               src="/girl.png"
               width={550}
               height={420}

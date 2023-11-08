@@ -18,15 +18,16 @@ export default function Index() {
     <Container>
       <motion.div 
         ref={ref}
-        className="hidden h-[666px] w-[365px] items-center md:flex"
+        className="hidden lg:h-[666px] xl:h[700px] md:h-[555px] w-[565px] items-center md:flex"
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
         <Image
-          className="hidden h-[446px] w-[365px] md:block"
+          className="hidden w-[565px] md:block"
           src={Boy}
-          height={650}
+          height={666}
+          width={565}
           alt="boy"
         />
       </motion.div>

@@ -1,16 +1,19 @@
 import { Container } from './Container'
 import { Paragraph } from './Paragraph'
-import RedBar from '@/components/Global/RedBar'
+import { RedLine } from './RedLine'
 import { Title } from './Title'
 
-export function Header() {
+type HeaderProps = {
+  title: string
+  text: string
+}
+
+export function Header({ text, title }: HeaderProps) {
   return (
     <Container>
-      <div className="flex flex-col items-center justify-center gap-5">
-        <Title>blog</Title>
-        <Paragraph>Fique ligado aos nossos artigos</Paragraph>
-        <RedBar />
-      </div>
+      <Title>{title}</Title>
+      <Paragraph>{text}</Paragraph>
+      <RedLine />
     </Container>
   )
 }

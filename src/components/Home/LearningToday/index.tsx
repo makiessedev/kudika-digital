@@ -83,7 +83,7 @@ export async function LearningToday() {
               <span className='text-xs text-gray-500 font-medium'>Leitura: {post.readingRateInMinuts} min</span>
             </FooterContainer>
 
-            <button className="rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
+            <button className="hover:translate-x-1 hover:transition-transform rounded-3xl border border-gray-500/50 bg-white px-5 py-1 text-sm text-gray-500/50">
               <Link href={`/blog/post/${post.uid}`}>Ler mais</Link>
             </button>
           </PostContainer>
