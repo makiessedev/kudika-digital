@@ -10,7 +10,7 @@ Para instalar e executar este aplicativo em sua máquina local, siga estas etapa
 <strong><p>Clone o repositório usando:</p></strong>
 
 ```
-  git clone https://github.com/euotiniel/kudikadigital.git
+  git clone https://github.com/makiessedev/kudika-digital.git
 ```
 
 <strong><p>Navegue até ao projecto:</p></strong>
